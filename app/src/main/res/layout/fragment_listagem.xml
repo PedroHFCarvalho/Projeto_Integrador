@@ -5,7 +5,8 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListagemFragment" >
+    tools:context=".ListagemFragment"
+    style="@style/background">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingAddProd"
@@ -16,6 +17,7 @@
         android:clickable="true"
         android:contentDescription="@string/adicionar"
         android:src="@drawable/ic_baseline_add_24"
+        app:backgroundTint="@color/primaryLightColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="ImageContrastCheck" />

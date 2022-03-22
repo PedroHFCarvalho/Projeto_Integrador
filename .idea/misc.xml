@@ -6,7 +6,7 @@
         <entry key="..\:/Users/Pedro-PC/Desktop/pi/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Pedro-PC/Desktop/pi/app/src/main/res/layout/cardview_produto.xml" value="0.33" />
         <entry key="..\:/Users/Pedro-PC/Desktop/pi/app/src/main/res/layout/fragment_listagem.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Pedro-PC/Desktop/pi/app/src/main/res/layout/fragment_postagem.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Pedro-PC/Desktop/pi/app/src/main/res/layout/fragment_postagem.xml" value="0.33" />
       </map>
     </option>
   </component>
@@ -15,5 +15,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.33" />
+      </ProjectState>
+    </option>
   </component>
 </project>

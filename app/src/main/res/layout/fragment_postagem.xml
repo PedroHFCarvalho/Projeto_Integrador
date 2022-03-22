@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/background_card"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginHorizontal="8dp"
+    android:elevation="2dp"
     tools:context=".MainActivity">
 
     <EditText
@@ -11,7 +15,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="24dp"
         android:autofillHints=""
         android:ems="10"
@@ -27,8 +31,8 @@
         android:id="@+id/imgProd"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:contentDescription="@string/produto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -41,7 +45,7 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
         android:autofillHints="Q"
         android:entries="@array/quantidade"
@@ -90,12 +94,12 @@
         android:layout_marginBottom="28dp"
         android:ems="10"
         android:hint="@string/valor"
+        android:importantForAutofill="no"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnAdicionar"
-        app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnAdicionar"
@@ -104,9 +108,16 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="28dp"
+        android:letterSpacing="0.1"
+        android:paddingLeft="16dp"
+        android:paddingTop="4dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="4dp"
         android:text="@string/adicionar"
+        app:iconPadding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/eTextValor" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
