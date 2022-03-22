@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listagemFragment">
+
+    <fragment
+        android:id="@+id/listagemFragment"
+        android:name="com.carvalho.pi.ListagemFragment"
+        android:label="fragment_listagem"
+        tools:layout="@layout/fragment_listagem" >
+        <action
+            android:id="@+id/action_listagemFragment_to_postagemFragment"
+            app:destination="@id/postagemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postagemFragment"
+        android:name="com.carvalho.pi.PostagemFragment"
+        android:label="fragment_postagem"
+        tools:layout="@layout/fragment_postagem" >
+        <action
+            android:id="@+id/action_postagemFragment_to_listagemFragment"
+            app:destination="@id/listagemFragment" />
+    </fragment>
+</navigation>
