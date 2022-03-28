@@ -1,6 +1,14 @@
 package com.carvalho.pi.model
 
-data class Produto(val titulo: String, var descricao: String, var valor: Double, var img: String) {
+import android.content.res.Resources
+import android.graphics.drawable.Drawable
+
+data class Produto(
+    val titulo: String?,
+    var descricao: String,
+    var valor: Double?,
+    ) {
+
     var qtd: Int = 0
     var categoria: String = ""
 
@@ -8,10 +16,10 @@ data class Produto(val titulo: String, var descricao: String, var valor: Double,
         titulo: String,
         descricao: String,
         valor: Double,
-        img: String,
+        img: Drawable,
         qtd: Int,
         categoria: String
-    ) : this(titulo, descricao, valor, img) {
+    ) : this(titulo, descricao, valor,) {
         this.qtd = qtd
         this.categoria = categoria
 
