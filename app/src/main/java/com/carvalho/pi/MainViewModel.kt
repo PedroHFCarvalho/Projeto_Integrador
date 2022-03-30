@@ -32,6 +32,7 @@ class MainViewModel @Inject constructor(private val repository: Repository) : Vi
     fun adicionarProduto(produto: Produto) {
         viewModelScope.launch {
             try {
+                validadorPost(produto)
                 repository.adicionarProduto(produto)
                 listarProduto()
             } catch (e: Exception) {
@@ -71,9 +72,9 @@ class MainViewModel @Inject constructor(private val repository: Repository) : Vi
     }
 
 
-    fun validadorPost(produto: Produto) {
+    private fun validadorPost(produto: Produto) {
 
-        if (produto.titulo.isNullOrBlank() || produto.titulo.length <= 5 || produto.titulo.length >= 61) {
+        if (produto.nomeMarca.isNullOrBlank() || produto.nomeMarca.length <= 5 || produto.nomeMarca.length >= 61) {
             throw Exception("Titulo Incorreto")
         }
         if (produto.descricao.isNullOrBlank() || produto.descricao.length <= 5 || produto.descricao.length >= 500) {

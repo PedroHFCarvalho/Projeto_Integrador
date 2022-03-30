@@ -20,7 +20,7 @@ class PostagemFragment : Fragment() {
 
     private lateinit var binding: FragmentPostagemBinding
     private val viewModel: MainViewModel by activityViewModels()
-    private var IdCategSelect = 0L
+    private var idCategSelect = 0L
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,7 +36,7 @@ class PostagemFragment : Fragment() {
 
         binding.btnAdicionar.setOnClickListener {
             try {
-                viewModel.validadorPost(addProd())
+                addProd()
                 findNavController().navigate(R.id.action_postagemFragment_to_listagemFragment)
             } catch (e: Exception) {
                 Toast.makeText(context, e.message.toString(), Toast.LENGTH_SHORT).show()
@@ -58,7 +58,7 @@ class PostagemFragment : Fragment() {
             binding.spnrCateg.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                     val categSelect = binding.spnrCateg.selectedItem as Categoria
-                    IdCategSelect = categSelect.id
+                    idCategSelect = categSelect.id
                 }
 
                 override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -71,13 +71,16 @@ class PostagemFragment : Fragment() {
     }
 
 
-    fun addProd(): Produto {
-        val nome = binding.textName.text.toString()
+    fun addProd(){
+        val nomeMarca = binding.textName.text.toString()
         val descricao = binding.eTextDescricao.text.toString()
-        val valor = binding.eTextValor.text.toString().toDoubleOrNull()
+        val imagem = binding.imgProd.drawable.toString()
+        val quantidade = binding.spnrQtd.toString().toInt()
+        val valor = binding.eTextValor.text.toString().toDouble()
+        val categoria = Categoria(idCategSelect, null)
 
+        viewModel.adicionarProduto(Produto(nomeMarca, descricao, imagem, quantidade, valor, categoria))
 
-        return Produto(nome, descricao, valor)
 
     }
 

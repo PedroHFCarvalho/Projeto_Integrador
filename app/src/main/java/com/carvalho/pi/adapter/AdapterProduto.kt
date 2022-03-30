@@ -29,7 +29,7 @@ class AdapterProduto : RecyclerView.Adapter<AdapterProduto.ProdutoViewHolder>() 
 
     override fun onBindViewHolder(holder: ProdutoViewHolder, position: Int) {
 
-        holder.titulo.text = listProduto[position].titulo
+        holder.titulo.text = listProduto[position].nomeMarca
         holder.descricao.text = listProduto[position].descricao
         holder.valor.text = "R$ ${listProduto[position].valor}"
        // holder.img.setImageResource(listProduto[position].img.toInt())
