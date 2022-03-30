@@ -21,6 +21,7 @@ class PostagemFragment : Fragment() {
     private lateinit var binding: FragmentPostagemBinding
     private val viewModel: MainViewModel by activityViewModels()
     private var idCategSelect = 0L
+    private var qtdSelect = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,6 +29,8 @@ class PostagemFragment : Fragment() {
     ): View? {
 
         binding = FragmentPostagemBinding.inflate(layoutInflater, container, false)
+
+        setSpineerQuantidade()
 
         viewModel.responseCategoria.observe(viewLifecycleOwner) {
             Log.d("Req", it.body().toString())
@@ -45,6 +48,29 @@ class PostagemFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    fun setSpineerQuantidade(){
+
+        var listaQuantidade = listOf (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+
+        binding.spnrQtd.adapter = ArrayAdapter(
+            requireContext(),
+            androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
+            listaQuantidade)
+
+        binding.spnrQtd.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                qtdSelect = binding.spnrQtd.selectedItem.toString().toInt()
+            }
+
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+
+        }
+
     }
 
     fun setSpineerCategoria(listaCategoria: List<Categoria>?) {
@@ -75,12 +101,11 @@ class PostagemFragment : Fragment() {
         val nomeMarca = binding.textName.text.toString()
         val descricao = binding.eTextDescricao.text.toString()
         val imagem = binding.imgProd.drawable.toString()
-        val quantidade = binding.spnrQtd.toString().toInt()
+        val quantidade = qtdSelect
         val valor = binding.eTextValor.text.toString().toDouble()
         val categoria = Categoria(idCategSelect, null)
 
         viewModel.adicionarProduto(Produto(nomeMarca, descricao, imagem, quantidade, valor, categoria))
-
 
     }
 
