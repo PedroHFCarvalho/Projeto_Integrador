@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_listagem.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_postagem.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/toolbar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/menu/bottom_nav.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/menu/top_nav.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Pedro-PC/Desktop/pi/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Pedro-PC/Desktop/pi/app/src/main/res/layout/cardview_produto.xml" value="0.33" />
         <entry key="..\:/Users/Pedro-PC/Desktop/pi/app/src/main/res/layout/fragment_listagem.xml" value="0.36666666666666664" />
