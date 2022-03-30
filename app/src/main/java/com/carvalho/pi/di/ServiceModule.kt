@@ -9,7 +9,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object ServeceModule {
+object ServiceModule {
 
     @Provides // Retorna a dependência que vai ser utilizada
     @Singleton //

@@ -93,7 +93,6 @@ class PostagemFragment : Fragment() {
 
             }
         }
-
     }
 
 
@@ -105,7 +104,7 @@ class PostagemFragment : Fragment() {
         val valor = binding.eTextValor.text.toString().toDouble()
         val categoria = Categoria(idCategSelect, null)
 
-        viewModel.adicionarProduto(Produto(nomeMarca, descricao, imagem, quantidade, valor, categoria))
+        viewModel.adicionarProduto(Produto(0L,nomeMarca, descricao, imagem, quantidade, valor, categoria))
 
     }
 

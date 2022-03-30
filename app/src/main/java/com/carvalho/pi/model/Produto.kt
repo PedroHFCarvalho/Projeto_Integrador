@@ -4,6 +4,7 @@ import android.content.res.Resources
 import android.graphics.drawable.Drawable
 
 data class Produto(
+    val id: Long,
     val nomeMarca: String?,
     var descricao: String,
     var imagem: String,

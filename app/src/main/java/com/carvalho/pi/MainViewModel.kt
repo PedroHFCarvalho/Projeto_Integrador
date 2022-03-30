@@ -74,10 +74,10 @@ class MainViewModel @Inject constructor(private val repository: Repository) : Vi
 
     private fun validadorPost(produto: Produto) {
 
-        if (produto.nomeMarca.isNullOrBlank() || produto.nomeMarca.length <= 5 || produto.nomeMarca.length >= 61) {
+        if (produto.nomeMarca.isNullOrBlank() || produto.nomeMarca.length < 5 || produto.nomeMarca.length >= 61) {
             throw Exception("Titulo Incorreto")
         }
-        if (produto.descricao.isNullOrBlank() || produto.descricao.length <= 5 || produto.descricao.length >= 500) {
+        if (produto.descricao.isNullOrBlank() || produto.descricao.length < 5 || produto.descricao.length >= 500) {
             throw Exception("Descrição Incorreto")
         }
         if (produto.valor == null) {

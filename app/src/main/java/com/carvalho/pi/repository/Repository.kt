@@ -15,8 +15,14 @@ class Repository {
         return RetrofitInstance.api.postProduto(produto)
     }
 
+    suspend fun deleteProduto(id: String): Response<Produto>{
+        return RetrofitInstance.api.deleteProduto(id)
+    }
+
     suspend fun listaCategoria(): Response<List<Categoria>> {
         return RetrofitInstance.api.listCategorias()
     }
+
+
 
 }

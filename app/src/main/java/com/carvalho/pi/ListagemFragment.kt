@@ -34,7 +34,11 @@ class ListagemFragment : Fragment() {
         viewModel.listarProduto()
         viewModel.listarCategoria()
 
+
         viewModel.responseProduto.observe(viewLifecycleOwner) {
+            if (it != null) {
+                adapteProd.setLista(it.body()!!)
+            }
             Log.d("Req", it.body().toString())
         }
 

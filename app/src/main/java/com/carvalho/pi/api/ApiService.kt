@@ -11,8 +11,13 @@ interface ApiService {
     suspend fun listProduto(): Response<List<Produto>>
 
     @POST("produtos")
-    suspend fun postProduto(@Body produto: Produto) : Response<Produto>
+    suspend fun postProduto(@Body produto: Produto): Response<Produto>
 
     @GET("categoria")
     suspend fun listCategorias(): Response<List<Categoria>>
+
+    @DELETE("produtos/{id}")
+    suspend fun deleteProduto(@Path("id") id: String): Response<Produto>
 }
+
+
