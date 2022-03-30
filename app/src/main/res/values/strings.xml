@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProjetoIntegrador</string>
+    <string name="app_name">Recomecio</string>
     <string name="nome_do_produto">Nome do produto</string>
     <string name="valor">Valor</string>
     <string name="adicionar">Adicionar</string>
@@ -7,6 +7,9 @@
     <string name="descricao">Descrição</string>
     <string name="produto">Produto</string>
     <string name="listagem">listagem</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="pesquisar">Pesquisar</string>
     <string-array name="quantidade">
         <item>Quantidade</item>
         <item>1</item>

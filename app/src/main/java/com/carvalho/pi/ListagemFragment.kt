@@ -48,8 +48,8 @@ class ListagemFragment : Fragment() {
         binding.recyclerListProd.setHasFixedSize(true)
         //adapteProd.setLista(listProduto)
 
-        /*
-        binding.floatingAddProd.setOnClickListener {
+
+        /*binding.floatingAddProd.setOnClickListener {
             findNavController().navigate(R.id.action_listagemFragment_to_postagemFragment)
         }*/
 
