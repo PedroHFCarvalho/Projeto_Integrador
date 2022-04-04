@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -79,6 +80,7 @@ class MainActivity : AppCompatActivity() {
             }
             com.carvalho.pi.R.id.postagemFragment -> {
                 // Navegaçao do botao Adicionar
+                //*Adicionar viewModel.produtoSelecionado = null
                 findNavController(com.carvalho.pi.R.id.fragmentContainerView).navigate(com.carvalho.pi.R.id.postagemFragment)
                 return true
             }

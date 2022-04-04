@@ -5,10 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.carvalho.pi.MainViewModel
 import com.carvalho.pi.R
 import com.carvalho.pi.model.Produto
 
-class AdapterProduto : RecyclerView.Adapter<AdapterProduto.ProdutoViewHolder>() {
+class AdapterProduto (private val prodItemClickListener : ProdItemClickListener, private val viewModel : MainViewModel) : RecyclerView.Adapter<AdapterProduto.ProdutoViewHolder>() {
 
     var listProduto = emptyList<Produto>()
 
@@ -33,6 +34,10 @@ class AdapterProduto : RecyclerView.Adapter<AdapterProduto.ProdutoViewHolder>() 
         holder.descricao.text = listProduto[position].descricao
         holder.valor.text = "R$ ${listProduto[position].valor}"
        // holder.img.setImageResource(listProduto[position].img.toInt())
+
+        holder.itemView.setOnClickListener{
+            prodItemClickListener.onProdClicked(listProduto)
+        }
 
     }
 

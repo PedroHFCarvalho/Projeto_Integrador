@@ -22,6 +22,7 @@ class PostagemFragment : Fragment() {
     private val viewModel: MainViewModel by activityViewModels()
     private var idCategSelect = 0L
     private var qtdSelect = 0
+    private var produtoSelecionado : Produto? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,6 +32,7 @@ class PostagemFragment : Fragment() {
         binding = FragmentPostagemBinding.inflate(layoutInflater, container, false)
 
         setSpineerQuantidade()
+        recuperarDados()
 
         viewModel.responseCategoria.observe(viewLifecycleOwner) {
             Log.d("Req", it.body().toString())
@@ -95,7 +97,6 @@ class PostagemFragment : Fragment() {
         }
     }
 
-
     fun addProd(){
         val nomeMarca = binding.textName.text.toString()
         val descricao = binding.eTextDescricao.text.toString()
@@ -104,8 +105,29 @@ class PostagemFragment : Fragment() {
         val valor = binding.eTextValor.text.toString().toDouble()
         val categoria = Categoria(idCategSelect, null)
 
+        if(produtoSelecionado == null){
+
         viewModel.adicionarProduto(Produto(0L,nomeMarca, descricao, imagem, quantidade, valor, categoria))
 
+        }else{
+
+            viewModel.updateProduto(Produto(0L, nomeMarca, descricao, imagem, quantidade, valor, categoria))
+        }
+
+    }
+    private fun recuperarDados(){
+        produtoSelecionado = viewModel.produtoSelecionado
+        if (produtoSelecionado != null){
+            binding.textName.setText(produtoSelecionado?.nomeMarca)
+            binding.eTextDescricao.setText(produtoSelecionado?.descricao)
+            //binding.imgProd.setImageDrawable(produtoSelecionado?.imagem)
+            binding.eTextValor.setText(produtoSelecionado?.valor.toString())
+        }else{
+            binding.textName.text = null
+            binding.eTextDescricao.text = null
+            //binding.imgProd.drawable = null
+            binding.eTextValor.text = null
+        }
     }
 
 

@@ -25,6 +25,8 @@ class MainViewModel @Inject constructor(private val repository: Repository) : Vi
     val responseProduto: LiveData<Response<List<Produto>>> = _responseProduto
     val responseCategoria: LiveData<Response<List<Categoria>>> = _responseCategoria
 
+    var produtoSelecionado : Produto? = null
+
     init {
         listarProduto()
     }
@@ -41,7 +43,6 @@ class MainViewModel @Inject constructor(private val repository: Repository) : Vi
 
         }
     }
-
 
     fun listarProduto() {
         viewModelScope.launch {
@@ -71,7 +72,6 @@ class MainViewModel @Inject constructor(private val repository: Repository) : Vi
 
     }
 
-
     private fun validadorPost(produto: Produto) {
 
         if (produto.nomeMarca.isNullOrBlank() || produto.nomeMarca.length < 5 || produto.nomeMarca.length >= 61) {
@@ -84,6 +84,17 @@ class MainViewModel @Inject constructor(private val repository: Repository) : Vi
             throw Exception("Valor Incorreto")
         }
 
+    }
+
+    fun updateProduto(produto : Produto){
+        viewModelScope.launch {
+            try {
+                repository.updateProduto(produto)
+                listarProduto()
+            }catch (e: Exception){
+                Log.d("ErrorUpdate", e.message.toString())
+            }
+        }
     }
 
 
