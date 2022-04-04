@@ -3,12 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/homeFragment"
+        android:id="@+id/listagemFragment"
         android:title="Home"
         android:icon="@drawable/ic_baseline_home_24"/>
 
     <item
-        android:id="@+id/perfilFragment"
+        android:id="@+id/postagemFragment"
         android:title="Perfil"
         android:icon="@drawable/ic_baseline_person_24"/>
 

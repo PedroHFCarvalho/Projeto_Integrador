@@ -8,50 +8,59 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.carvalho.pi.databinding.FragmentPostagemBinding
+import com.carvalho.pi.databinding.FragmentEditProdutoBinding
+import com.carvalho.pi.databinding.FragmentProdutoBinding
 import com.carvalho.pi.model.Categoria
 import com.carvalho.pi.model.Produto
-import java.lang.Exception
 
-class PostagemFragment : Fragment() {
 
-    private lateinit var binding: FragmentPostagemBinding
+class EditProdutoFragment : Fragment() {
+
+    private lateinit var binding: FragmentEditProdutoBinding
     private val viewModel: MainViewModel by activityViewModels()
+    private var produtoSelecionado : Produto? = null
     private var idCategSelect = 0L
     private var qtdSelect = 0
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        binding = FragmentPostagemBinding.inflate(layoutInflater, container, false)
+        binding = FragmentEditProdutoBinding.inflate(layoutInflater, container, false)
 
         setSpineerQuantidade()
-        //recuperarDados()
+
+        recuperarDados()
 
         viewModel.responseCategoria.observe(viewLifecycleOwner) {
             Log.d("Req", it.body().toString())
             setSpineerCategoria(it.body())
         }
 
-        binding.btnAdicionar.setOnClickListener {
-            try {
-                addProd()
-                findNavController().navigate(R.id.action_postagemFragment_to_listagemFragment)
-            } catch (e: Exception) {
-                Toast.makeText(context, e.message.toString(), Toast.LENGTH_SHORT).show()
-            }
-
+        binding.btnEditar.setOnClickListener {
+            editProd()
+            findNavController().navigate(R.id.action_editProdutoFragment_to_produtoFragment)
         }
 
         return binding.root
     }
 
+    private fun recuperarDados(){
+        produtoSelecionado = viewModel.produtoSelecionado
+        if (produtoSelecionado != null){
+            binding.textName.setText(produtoSelecionado?.nomeMarca)
+            binding.eTextDescricao.setText(produtoSelecionado?.descricao)
+            //binding.imgProd.setImageDrawable(produtoSelecionado?.imagem)
+            binding.eTextValor.setText(produtoSelecionado?.valor.toString())
+        }else{
+            binding.textName.text = null
+            binding.eTextDescricao.text = null
+            //binding.imgProd.drawable = null
+            binding.eTextValor.text = null
+        }
+    }
     fun setSpineerQuantidade(){
 
         var listaQuantidade = listOf (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
@@ -98,7 +107,7 @@ class PostagemFragment : Fragment() {
     }
 
 
-    fun addProd(){
+    fun editProd(){
         val nomeMarca = binding.textName.text.toString()
         val descricao = binding.eTextDescricao.text.toString()
         val imagem = binding.imgProd.drawable.toString()
@@ -106,10 +115,8 @@ class PostagemFragment : Fragment() {
         val valor = binding.eTextValor.text.toString().toDouble()
         val categoria = Categoria(idCategSelect, null)
 
-        viewModel.adicionarProduto(Produto(0L,nomeMarca, descricao, imagem, quantidade, valor, categoria))
+        viewModel.updateProduto(Produto(0L,nomeMarca, descricao, imagem, quantidade, valor, categoria))
 
     }
-
-
 
 }

@@ -4,14 +4,14 @@ import android.R
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
-import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
+import androidx.navigation.NavOptions
 import androidx.navigation.findNavController
+import androidx.navigation.navOptions
 import androidx.navigation.ui.setupWithNavController
-import com.carvalho.pi.databinding.ActivityMainBinding
+import com.carvalho.pi.databinding.*
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar) // Adiciona a ToolBar no lugar da ActionBar
         supportActionBar?.setDisplayHomeAsUpEnabled(true) //Adiciona a Arrow na ToolBar
+
+
 
 
         val navController =
@@ -72,15 +74,17 @@ class MainActivity : AppCompatActivity() {
                 binding.drawerLayout.openDrawer(GravityCompat.START)
                 return true
             }
+
             com.carvalho.pi.R.id.listagemFragment -> {
                 // Navegaçao do botao Busca
                 findNavController(com.carvalho.pi.R.id.fragmentContainerView).navigate(com.carvalho.pi.R.id.listagemFragment)
 
+                
                 return true
             }
             com.carvalho.pi.R.id.postagemFragment -> {
                 // Navegaçao do botao Adicionar
-                //*Adicionar viewModel.produtoSelecionado = null
+                //viewModel.produtoSelecionado = null
                 findNavController(com.carvalho.pi.R.id.fragmentContainerView).navigate(com.carvalho.pi.R.id.postagemFragment)
                 return true
             }

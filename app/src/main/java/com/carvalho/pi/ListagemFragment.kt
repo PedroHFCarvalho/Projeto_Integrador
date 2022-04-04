@@ -55,9 +55,10 @@ class ListagemFragment : Fragment(), ProdItemClickListener {
 
     }
 
+
     override fun onProdClicked(produto: Produto) {
         viewModel.produtoSelecionado = produto
-        findNavController().navigate(R.id.action_listagemFragment_to_postagemFragment)
+        findNavController().navigate(R.id.action_listagemFragment_to_produtoFragment)
     }
 
 }

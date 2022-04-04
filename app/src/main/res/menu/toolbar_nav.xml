@@ -6,7 +6,8 @@
         android:id="@+id/listagemFragment"
         app:showAsAction="always"
         android:icon="@drawable/ic_baseline_search_24"
-        android:title="@string/pesquisar" />
+        android:title="@string/pesquisar"
+        />
 
     <item
         android:id="@+id/postagemFragment"

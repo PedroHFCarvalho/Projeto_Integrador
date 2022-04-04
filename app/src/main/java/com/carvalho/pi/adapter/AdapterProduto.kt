@@ -36,7 +36,7 @@ class AdapterProduto (private val prodItemClickListener : ProdItemClickListener,
        // holder.img.setImageResource(listProduto[position].img.toInt())
 
         holder.itemView.setOnClickListener{
-            prodItemClickListener.onProdClicked(listProduto)
+            prodItemClickListener.onProdClicked(listProduto[position])
         }
 
     }

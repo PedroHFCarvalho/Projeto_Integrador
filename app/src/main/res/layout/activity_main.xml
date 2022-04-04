@@ -28,14 +28,14 @@
                 android:fitsSystemWindows="true"
                 android:minHeight="?attr/actionBarSize"
                 app:layout_constraintTop_toTopOf="parent"
-                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                app:menu="@menu/toolbar_nav">
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
+                    android:layout_width="150dp"
+                    android:layout_height="45dp"
                     android:contentDescription="@string/app_name"
-                    android:src="@drawable/ic_launcher_foreground" />
+                    android:src="@drawable/logo_white" />
+
             </androidx.appcompat.widget.Toolbar>
 
             <fragment
@@ -59,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            android:background="@android:color/white"
-            app:menu="@menu/drawer_nav" />
+            app:menu="@menu/drawer_nav"
+            style="@style/background"/>
     </androidx.drawerlayout.widget.DrawerLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

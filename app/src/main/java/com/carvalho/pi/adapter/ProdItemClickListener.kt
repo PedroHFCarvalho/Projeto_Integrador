@@ -4,7 +4,4 @@ import com.carvalho.pi.model.Produto
 
 interface ProdItemClickListener {
     fun onProdClicked(produto : Produto)
-    fun onProdClicked(produto: List<Produto>) {
-
-    }
 }

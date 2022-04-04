@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_listagemFragment_to_postagemFragment"
             app:destination="@id/postagemFragment" />
+        <action
+            android:id="@+id/action_listagemFragment_to_produtoFragment"
+            app:destination="@id/produtoFragment" />
     </fragment>
     <fragment
         android:id="@+id/postagemFragment"
@@ -21,6 +24,28 @@
         tools:layout="@layout/fragment_postagem" >
         <action
             android:id="@+id/action_postagemFragment_to_listagemFragment"
-            app:destination="@id/listagemFragment" />
+            app:destination="@id/listagemFragment"
+            app:popUpTo="@id/postagemFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/produtoFragment"
+        android:name="com.carvalho.pi.ProdutoFragment"
+        android:label="fragment_produto"
+        tools:layout="@layout/fragment_produto" >
+        <action
+            android:id="@+id/action_produtoFragment_to_editProdutoFragment"
+            app:destination="@id/editProdutoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProdutoFragment"
+        android:name="com.carvalho.pi.EditProdutoFragment"
+        android:label="fragment_edit_produto"
+        tools:layout="@layout/fragment_edit_produto" >
+        <action
+            android:id="@+id/action_editProdutoFragment_to_produtoFragment"
+            app:destination="@id/produtoFragment"
+            app:popUpTo="@id/editProdutoFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>
