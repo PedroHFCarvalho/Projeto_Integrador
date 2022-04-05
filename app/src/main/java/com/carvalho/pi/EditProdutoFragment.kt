@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.carvalho.pi.databinding.FragmentEditProdutoBinding
@@ -20,7 +21,7 @@ class EditProdutoFragment : Fragment() {
 
     private lateinit var binding: FragmentEditProdutoBinding
     private val viewModel: MainViewModel by activityViewModels()
-    private var produtoSelecionado : Produto? = null
+    private var produtoSelecionado: Produto? = null
     private var idCategSelect = 0L
     private var qtdSelect = 0
 
@@ -39,36 +40,45 @@ class EditProdutoFragment : Fragment() {
             setSpineerCategoria(it.body())
         }
 
+        binding.btnDeletarEdit.setOnClickListener {
+            viewModel.deleteProduto(viewModel.produtoSelecionado!!.id)
+            findNavController().navigate(R.id.action_editProdutoFragment_to_listagemFragment)
+            Toast.makeText(context, "Produto Foi Deletado com Sucesso", Toast.LENGTH_SHORT).show()
+        }
+
         binding.btnEditar.setOnClickListener {
             editProd()
             findNavController().navigate(R.id.action_editProdutoFragment_to_produtoFragment)
+            Toast.makeText(context, "Produto Foi Editado com Sucesso", Toast.LENGTH_SHORT).show()
         }
 
         return binding.root
     }
 
-    private fun recuperarDados(){
+    private fun recuperarDados() {
         produtoSelecionado = viewModel.produtoSelecionado
-        if (produtoSelecionado != null){
+        if (produtoSelecionado != null) {
             binding.textName.setText(produtoSelecionado?.nomeMarca)
             binding.eTextDescricao.setText(produtoSelecionado?.descricao)
             //binding.imgProd.setImageDrawable(produtoSelecionado?.imagem)
             binding.eTextValor.setText(produtoSelecionado?.valor.toString())
-        }else{
+        } else {
             binding.textName.text = null
             binding.eTextDescricao.text = null
             //binding.imgProd.drawable = null
             binding.eTextValor.text = null
         }
     }
-    fun setSpineerQuantidade(){
 
-        var listaQuantidade = listOf (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+    fun setSpineerQuantidade() {
+
+        var listaQuantidade = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
 
         binding.spnrQtd.adapter = ArrayAdapter(
             requireContext(),
             androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
-            listaQuantidade)
+            listaQuantidade
+        )
 
         binding.spnrQtd.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
@@ -107,7 +117,7 @@ class EditProdutoFragment : Fragment() {
     }
 
 
-    fun editProd(){
+    fun editProd() {
         val nomeMarca = binding.textName.text.toString()
         val descricao = binding.eTextDescricao.text.toString()
         val imagem = binding.imgProd.drawable.toString()
@@ -115,7 +125,17 @@ class EditProdutoFragment : Fragment() {
         val valor = binding.eTextValor.text.toString().toDouble()
         val categoria = Categoria(idCategSelect, null)
 
-        viewModel.updateProduto(Produto(0L,nomeMarca, descricao, imagem, quantidade, valor, categoria))
+        viewModel.updateProduto(
+            Produto(
+                0L,
+                nomeMarca,
+                descricao,
+                imagem,
+                quantidade,
+                valor,
+                categoria
+            )
+        )
 
     }
 

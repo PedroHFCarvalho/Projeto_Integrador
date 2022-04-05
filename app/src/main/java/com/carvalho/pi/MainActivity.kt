@@ -9,9 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.navigation.NavOptions
 import androidx.navigation.findNavController
-import androidx.navigation.navOptions
 import androidx.navigation.ui.setupWithNavController
-import com.carvalho.pi.databinding.*
+import com.carvalho.pi.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -29,8 +28,6 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar) // Adiciona a ToolBar no lugar da ActionBar
         supportActionBar?.setDisplayHomeAsUpEnabled(true) //Adiciona a Arrow na ToolBar
-
-
 
 
         val navController =
@@ -77,15 +74,23 @@ class MainActivity : AppCompatActivity() {
 
             com.carvalho.pi.R.id.listagemFragment -> {
                 // Navegaçao do botao Busca
-                findNavController(com.carvalho.pi.R.id.fragmentContainerView).navigate(com.carvalho.pi.R.id.listagemFragment)
-
-                
+                findNavController(com.carvalho.pi.R.id.fragmentContainerView).navigate(
+                    com.carvalho.pi.R.id.listagemFragment,
+                    null,
+                    NavOptions.Builder().setPopUpTo(com.carvalho.pi.R.id.listagemFragment, true)
+                        .build()
+                )
                 return true
             }
             com.carvalho.pi.R.id.postagemFragment -> {
                 // Navegaçao do botao Adicionar
                 //viewModel.produtoSelecionado = null
-                findNavController(com.carvalho.pi.R.id.fragmentContainerView).navigate(com.carvalho.pi.R.id.postagemFragment)
+                findNavController(com.carvalho.pi.R.id.fragmentContainerView).navigate(
+                    com.carvalho.pi.R.id.postagemFragment,
+                    null,
+                    NavOptions.Builder().setPopUpTo(com.carvalho.pi.R.id.postagemFragment, true)
+                        .build()
+                )
                 return true
             }
         }

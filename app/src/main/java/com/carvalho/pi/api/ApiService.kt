@@ -20,7 +20,7 @@ interface ApiService {
     suspend fun updateProduto(@Body produto : Produto) : Response<Produto>
 
     @DELETE("produtos/{id}")
-    suspend fun deleteProduto(@Path("id") id: String): Response<Produto>
+    suspend fun deleteProduto(@Path("id") id: Long): Response<Produto>
 }
 
 

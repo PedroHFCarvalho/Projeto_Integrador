@@ -97,5 +97,15 @@ class MainViewModel @Inject constructor(private val repository: Repository) : Vi
         }
     }
 
+    fun deleteProduto(id: Long){
+        viewModelScope.launch {
+            try {
+                repository.deleteProduto(id)
+                listarProduto()
+            }catch (e :Exception){
+                Log.d("ErrorDelete", e.message.toString())
+            }
+        }
+    }
 
 }

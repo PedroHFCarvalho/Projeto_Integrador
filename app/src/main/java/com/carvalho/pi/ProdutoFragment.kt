@@ -40,7 +40,9 @@ class ProdutoFragment : Fragment() {
             binding.textNamePreview.text = produtoSelecionado?.nomeMarca
             binding.eTextDescricaoPreview.text = produtoSelecionado?.descricao
             //binding.imgProd.setImageDrawable(produtoSelecionado?.imagem)
-            binding.eTextValorPreview.text = produtoSelecionado?.valor.toString()
+            binding.textCategoriaPreview.text = "Categoria: \n${produtoSelecionado?.categoria.toString()}"
+            binding.textQtdPreview.text = "Quantidade: \n${produtoSelecionado?.quantidade.toString()}"
+            binding.eTextValorPreview.text = "R$ ${produtoSelecionado?.valor.toString()}"
         }else{
             binding.textNamePreview.text = null
             binding.eTextDescricaoPreview.text = null
