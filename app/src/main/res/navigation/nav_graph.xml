@@ -36,6 +36,9 @@
         <action
             android:id="@+id/action_produtoFragment_to_editProdutoFragment"
             app:destination="@id/editProdutoFragment" />
+        <action
+            android:id="@+id/action_produtoFragment_to_posCompraFragment"
+            app:destination="@id/posCompraFragment" />
     </fragment>
     <fragment
         android:id="@+id/editProdutoFragment"
@@ -112,7 +115,11 @@
         tools:layout="@layout/fragment_configuracoes" />
     <fragment
         android:id="@+id/posCompraFragment"
-        android:name="com.carvalho.pi.posCompraFragment"
+        android:name="com.carvalho.pi.PosCompraFragment"
         android:label="fragment_pos_compra"
-        tools:layout="@layout/fragment_pos_compra" />
+        tools:layout="@layout/fragment_pos_compra" >
+        <action
+            android:id="@+id/action_posCompraFragment_to_produtoFragment"
+            app:destination="@id/produtoFragment" />
+    </fragment>
 </navigation>

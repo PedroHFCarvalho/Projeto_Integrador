@@ -23,7 +23,7 @@ class Inicio : Fragment() {
 
         binding.bttnFLogin.setOnClickListener {
 
-            findNavController().navigate(R.id)
+            findNavController().navigate(R.id.)
         }
         binding.bttnFCadastro
         binding.bttnSkip

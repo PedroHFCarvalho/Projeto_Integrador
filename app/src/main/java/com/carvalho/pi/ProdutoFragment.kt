@@ -34,6 +34,10 @@ class ProdutoFragment : Fragment() {
 
         }
 
+        binding.btnComprarPreview.setOnClickListener {
+            findNavController().navigate(R.id.action_produtoFragment_to_posCompraFragment)
+        }
+
         return binding.root
     }
 
