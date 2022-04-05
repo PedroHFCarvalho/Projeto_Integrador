@@ -51,4 +51,63 @@
             android:id="@+id/action_editProdutoFragment_to_listagemFragment"
             app:destination="@id/listagemFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.carvalho.pi.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_cadastroFragment"
+            app:destination="@id/cadastroFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_paginaPrincipal"
+            app:destination="@id/paginaPrincipal" />
+        <action
+            android:id="@+id/action_loginFragment_to_esqueceuSenhaFragment"
+            app:destination="@id/esqueceuSenhaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroFragment"
+        android:name="com.carvalho.pi.CadastroFragment"
+        android:label="fragment_cadastro"
+        tools:layout="@layout/fragment_cadastro" >
+        <action
+            android:id="@+id/action_cadastroFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paginaPrincipal"
+        android:name="com.carvalho.pi.PaginaPrincipal"
+        android:label="fragment_pagina_principal"
+        tools:layout="@layout/fragment_pagina_principal" >
+        <action
+            android:id="@+id/action_paginaPrincipal_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_paginaPrincipal_to_cadastroFragment"
+            app:destination="@id/cadastroFragment" />
+        <action
+            android:id="@+id/action_paginaPrincipal_to_listagemFragment"
+            app:destination="@id/listagemFragment" />
+        <action
+            android:id="@+id/action_paginaPrincipal_to_produtoFragment"
+            app:destination="@id/produtoFragment" />
+        <action
+            android:id="@+id/action_paginaPrincipal_to_configuracoesFragment"
+            app:destination="@id/configuracoesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/esqueceuSenhaFragment"
+        android:name="com.carvalho.pi.EsqueceuSenhaFragment"
+        android:label="fragment_esqueceu_senha"
+        tools:layout="@layout/fragment_esqueceu_senha" >
+        <action
+            android:id="@+id/action_esqueceuSenhaFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/configuracoesFragment"
+        android:name="com.carvalho.pi.ConfiguracoesFragment"
+        android:label="fragment_configuracoes"
+        tools:layout="@layout/fragment_configuracoes" />
 </navigation>
