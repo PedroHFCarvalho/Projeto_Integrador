@@ -11,9 +11,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ProgressBar
 import android.widget.Toast
 import com.carvalho.pi.databinding.FragmentLoginBinding
 
@@ -44,10 +41,10 @@ class LoginFragment : Fragment() {
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
             .get(LoginViewModel::class.java)
 
-        val usernameEditText = binding.username
-        val passwordEditText = binding.password
-        val loginButton = binding.login
-        val loadingProgressBar = binding.loading
+        val usernameEditText = binding.editTUsername
+        val passwordEditText = binding.editTPassword
+        val loginButton = binding.bttnLogin
+        val loadingProgressBar = binding.loadingPB
 
         loginViewModel.loginFormState.observe(viewLifecycleOwner,
             Observer { loginFormState ->
