@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/listagemFragment">
+    app:startDestination="@id/inicioFragment">
 
     <fragment
         android:id="@+id/listagemFragment"
@@ -52,19 +52,19 @@
             app:destination="@id/listagemFragment" />
     </fragment>
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.carvalho.pi.ui.login.LoginFragment"
-        android:label="fragment_login"
+        android:id="@+id/inicioFragment"
+        android:name="com.carvalho.pi.Inicio"
+        android:label="fragment_inicio"
         tools:layout="@layout/fragment_inicio" >
         <action
-            android:id="@+id/action_loginFragment_to_cadastroFragment"
+            android:id="@+id/action_inicioFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_cadastroFragment"
             app:destination="@id/cadastroFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_paginaPrincipal"
+            android:id="@+id/action_inicioFragment_to_paginaPrincipal"
             app:destination="@id/paginaPrincipal" />
-        <action
-            android:id="@+id/action_loginFragment_to_esqueceuSenhaFragment"
-            app:destination="@id/esqueceuSenhaFragment" />
     </fragment>
     <fragment
         android:id="@+id/cadastroFragment"
@@ -115,4 +115,13 @@
         android:name="com.carvalho.pi.posCompraFragment"
         android:label="fragment_pos_compra"
         tools:layout="@layout/fragment_pos_compra" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.carvalho.pi.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_esqueceuSenhaFragment2"
+            app:destination="@id/esqueceuSenhaFragment" />
+    </fragment>
 </navigation>
