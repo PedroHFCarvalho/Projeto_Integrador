@@ -84,7 +84,6 @@ class MainActivity : AppCompatActivity() {
             }
             com.carvalho.pi.R.id.postagemFragment -> {
                 // Navegaçao do botao Adicionar
-                //viewModel.produtoSelecionado = null
                 findNavController(com.carvalho.pi.R.id.fragmentContainerView).navigate(
                     com.carvalho.pi.R.id.postagemFragment,
                     null,

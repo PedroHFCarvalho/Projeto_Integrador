@@ -29,6 +29,11 @@
         <item>Artesanatos</item>
         <item>Desapegos</item>
     </string-array>
+    <string-array name="pagamentos">
+        <item>Cartao de Credito</item>
+        <item>Boleto</item>
+        <item>PIX</item>
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="editar">Editar</string>
@@ -155,4 +160,7 @@
     <string name="Emaillogin">Digite seu Login</string>
     <string name="LoginPassword">Digite sua Senha</string>
     <string name="botaoEntrar">Entrar</string>
+    <string name="finalizar">Finalizar</string>
+    <string name="forma_de_pagamento">Forma de Pagamento</string>
+    <string name="endere_o">Endereço</string>
 </resources>
