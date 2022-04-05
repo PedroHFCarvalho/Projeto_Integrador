@@ -55,7 +55,7 @@
         android:id="@+id/loginFragment"
         android:name="com.carvalho.pi.ui.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_inicio" >
         <action
             android:id="@+id/action_loginFragment_to_cadastroFragment"
             app:destination="@id/cadastroFragment" />
@@ -110,4 +110,9 @@
         android:name="com.carvalho.pi.ConfiguracoesFragment"
         android:label="fragment_configuracoes"
         tools:layout="@layout/fragment_configuracoes" />
+    <fragment
+        android:id="@+id/posCompraFragment"
+        android:name="com.carvalho.pi.posCompraFragment"
+        android:label="fragment_pos_compra"
+        tools:layout="@layout/fragment_pos_compra" />
 </navigation>

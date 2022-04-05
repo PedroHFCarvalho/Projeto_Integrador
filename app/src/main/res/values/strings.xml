@@ -145,4 +145,14 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="login">Faça seu Login</string>
+    <string name="Cadastro">Novo por aqui? Crie uma conta</string>
+    <string name="Skip">Ir para a HomePage</string>
+    <string name="BVD">Seja Bem Vindo(a)</string>
+    <string name="InfoBVD">Faça o login ou cadastre-se para ter acesso a todas as funções</string>
+    <string name="Saudacao">Seja Bem Vindo(a)</string>
+    <string name="InfoSaudacao">Faça o Login ou Cadastre-se para ter acesso a todas as funções ;)</string>
+    <string name="Emaillogin">Digite seu Login</string>
+    <string name="LoginPassword">Digite sua Senha</string>
+    <string name="botaoEntrar">Entrar</string>
 </resources>
