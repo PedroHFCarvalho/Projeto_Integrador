@@ -19,13 +19,25 @@ class Inicio : Fragment() {
     ): View? {
         binding = FragmentInicioBinding.inflate(layoutInflater, container, false)
 
-        return binding.root
 
         binding.bttnFLogin.setOnClickListener {
 
-            findNavController().navigate(R.id.)
+            findNavController().navigate(R.id.action_inicioFragment_to_loginFragment)
+
         }
-        binding.bttnFCadastro
-        binding.bttnSkip
+
+        binding.bttnFCadastro.setOnClickListener {
+
+            findNavController().navigate(R.id.action_inicioFragment_to_cadastroFragment)
+
+        }
+
+        binding.bttnSkip.setOnClickListener {
+
+            findNavController().navigate(R.id.action_inicioFragment_to_paginaPrincipal)
+
+        }
+
+        return binding.root
     }
 }
