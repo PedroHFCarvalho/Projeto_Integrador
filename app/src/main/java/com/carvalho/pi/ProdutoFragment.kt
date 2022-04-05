@@ -1,5 +1,6 @@
 package com.carvalho.pi
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,7 +18,7 @@ class ProdutoFragment : Fragment() {
 
     private lateinit var binding: FragmentProdutoBinding
     private val viewModel: MainViewModel by activityViewModels()
-    private var produtoSelecionado : Produto? = null
+    private var produtoSelecionado: Produto? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,24 +27,27 @@ class ProdutoFragment : Fragment() {
         binding = FragmentProdutoBinding.inflate(layoutInflater, container, false)
 
         recuperarDados()
+        viewModel.listarCategoria()
 
         binding.btnEditPreview.setOnClickListener {
             findNavController().navigate(R.id.action_produtoFragment_to_editProdutoFragment)
+
         }
 
         return binding.root
     }
 
-    private fun recuperarDados(){
+    @SuppressLint("SetTextI18n")
+    private fun recuperarDados() {
         produtoSelecionado = viewModel.produtoSelecionado
-        if (produtoSelecionado != null){
+        if (produtoSelecionado != null) {
             binding.textNamePreview.text = produtoSelecionado?.nomeMarca
             binding.eTextDescricaoPreview.text = produtoSelecionado?.descricao
             //binding.imgProd.setImageDrawable(produtoSelecionado?.imagem)
-            binding.textCategoriaPreview.text = "Categoria: \n${produtoSelecionado?.categoria.toString()}"
-            binding.textQtdPreview.text = "Quantidade: \n${produtoSelecionado?.quantidade.toString()}"
-            binding.eTextValorPreview.text = "R$ ${produtoSelecionado?.valor.toString()}"
-        }else{
+            binding.textCategoriaPreview.text = "Categoria ${produtoSelecionado?.categoria?.descricao.toString()}"
+            binding.textQtdPreview.text = "Quantidade ${produtoSelecionado?.quantidade.toString()}"
+            binding.eTextValorPreview.text = produtoSelecionado?.valor.toString()
+        } else {
             binding.textNamePreview.text = null
             binding.eTextDescricaoPreview.text = null
             //binding.imgProd.drawable = null

@@ -91,7 +91,7 @@ class MainViewModel @Inject constructor(private val repository: Repository) : Vi
             try {
                 repository.updateProduto(produto)
                 listarProduto()
-            }catch (e: Exception){
+                }catch (e: Exception){
                 Log.d("ErrorUpdate", e.message.toString())
             }
         }
