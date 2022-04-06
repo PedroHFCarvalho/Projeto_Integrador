@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.carvalho.pi.databinding.FragmentInicioBinding
 
@@ -22,19 +23,25 @@ class Inicio : Fragment() {
 
         binding.bttnFLogin.setOnClickListener {
 
-            findNavController().navigate(R.id.action_inicioFragment_to_loginFragment)
+            findNavController().navigate(R.id.action_inicioFragment_to_loginFragment,null,
+            NavOptions.Builder().setPopUpTo(R.id.loginFragment, true)
+                .build())
 
         }
 
         binding.bttnFCadastro.setOnClickListener {
 
-            findNavController().navigate(R.id.action_inicioFragment_to_cadastroFragment)
+            findNavController().navigate(R.id.action_inicioFragment_to_cadastroFragment, null,
+                NavOptions.Builder().setPopUpTo(R.id.cadastroFragment, true)
+                    .build())
 
         }
 
         binding.bttnSkip.setOnClickListener {
 
-            findNavController().navigate(R.id.action_inicioFragment_to_paginaPrincipal)
+            findNavController().navigate(R.id.action_inicioFragment_to_paginaPrincipal,null,
+                NavOptions.Builder().setPopUpTo(R.id.paginaPrincipal, true)
+                    .build())
 
         }
 
