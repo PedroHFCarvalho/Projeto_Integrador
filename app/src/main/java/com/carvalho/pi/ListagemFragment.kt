@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,12 +18,14 @@ import com.carvalho.pi.databinding.ActivityMainBinding.inflate
 import com.carvalho.pi.databinding.FragmentListagemBinding
 import com.carvalho.pi.model.Produto
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.util.*
 
 
 class ListagemFragment : Fragment(), ProdItemClickListener {
 
     private lateinit var binding: FragmentListagemBinding
     private val viewModel: MainViewModel by activityViewModels()
+    private val list = arrayListOf<Produto>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,12 +38,16 @@ class ListagemFragment : Fragment(), ProdItemClickListener {
         viewModel.listarProduto()
         viewModel.listarCategoria()
 
+
         viewModel.responseProduto.observe(viewLifecycleOwner) {
             if (it != null) {
                 adapteProd.setLista(it.body()!!)
+
             }
             Log.d("Req", it.body().toString())
         }
+
+
 
         binding.recyclerListProd.layoutManager = LinearLayoutManager(context)
         binding.recyclerListProd.adapter = adapteProd
@@ -60,5 +67,8 @@ class ListagemFragment : Fragment(), ProdItemClickListener {
         viewModel.produtoSelecionado = produto
         findNavController().navigate(R.id.action_listagemFragment_to_produtoFragment)
     }
+
+
+
 
 }
