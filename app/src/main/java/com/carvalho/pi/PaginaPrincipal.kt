@@ -30,7 +30,7 @@ class PaginaPrincipal : Fragment(), ProdItemClickListener {
         viewModel.listarProduto()
         //viewModel.listarCategoria()
 
-        val adapteProd = AdapterHomepage(this, viewModel)
+        val adapteProd = AdapterHomepage(this, viewModel, requireContext())
 
 
 

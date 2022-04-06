@@ -2,6 +2,7 @@ package com.carvalho.pi
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.text.InputType
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,10 +10,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
 import com.carvalho.pi.databinding.FragmentEditProdutoBinding
 import com.carvalho.pi.model.Categoria
 import com.carvalho.pi.model.Produto
@@ -25,6 +28,7 @@ class EditProdutoFragment : Fragment() {
     private var produtoSelecionado: Produto? = null
     private lateinit var categoriaSelect: Categoria
     private var qtdSelect = 0
+    private var url = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -62,6 +66,31 @@ class EditProdutoFragment : Fragment() {
 
             builder.show()
         }
+        binding.imgProd.setOnClickListener {
+
+            val builder: AlertDialog.Builder = AlertDialog.Builder(context)
+            builder.setTitle("URL de imagem")
+
+            val input = EditText(context)
+            input.hint = "Coloque a Url da imagem do produto"
+            input.inputType = InputType.TYPE_CLASS_TEXT
+            builder.setView(input)
+
+            builder.setPositiveButton("OK") { _, _ ->
+                url = input.text.toString()
+                Glide.with(this)
+                    .load(url)
+                    .placeholder(R.drawable.placeholder)
+                    .into(binding.imgProd)
+
+            }
+            builder.setNegativeButton("Cancelar") { dialog, _ ->
+                dialog.cancel()
+            }
+
+            builder.show()
+        }
+
 
         binding.btnEditar.setOnClickListener {
 
@@ -82,12 +111,12 @@ class EditProdutoFragment : Fragment() {
         if (produtoSelecionado != null) {
             binding.textName.setText(produtoSelecionado?.nomeMarca)
             binding.eTextDescricao.setText(produtoSelecionado?.descricao)
-            //binding.imgProd.setImageDrawable(produtoSelecionado?.imagem)
+            Glide.with(this).load(produtoSelecionado?.imagem).placeholder(R.drawable.placeholder).into(binding.imgProd)
             binding.eTextValor.setText(produtoSelecionado?.valor.toString())
         } else {
             binding.textName.text = null
             binding.eTextDescricao.text = null
-            //binding.imgProd.drawable = null
+            Glide.with(this).load(produtoSelecionado?.imagem).placeholder(R.drawable.placeholder).into(binding.imgProd)
             binding.eTextValor.text = null
         }
     }
@@ -143,7 +172,7 @@ class EditProdutoFragment : Fragment() {
     fun editProd(): Produto {
         val nomeMarca = binding.textName.text.toString()
         val descricao = binding.eTextDescricao.text.toString()
-        val imagem = binding.imgProd.drawable.toString()
+        val imagem = url
         val quantidade = qtdSelect.toString().toInt()
         val valor = binding.eTextValor.text.toString().toDouble()
         val categoria = categoriaSelect

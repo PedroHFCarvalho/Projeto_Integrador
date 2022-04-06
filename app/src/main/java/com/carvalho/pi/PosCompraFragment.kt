@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
 import com.carvalho.pi.databinding.FragmentPosCompraBinding
 import com.carvalho.pi.model.Produto
 
@@ -55,6 +56,7 @@ class PosCompraFragment : Fragment() {
         produtoSelecionado = viewModel.produtoSelecionado
         if (produtoSelecionado != null) {
             binding.txtTituloProdFinal.text = produtoSelecionado?.nomeMarca.toString()
+            Glide.with(this).load(produtoSelecionado?.imagem).placeholder(R.drawable.placeholder).into(binding.imgProdutoFinal)
             binding.txtValorFinal.text = produtoSelecionado?.valor.toString()
         } else {
             binding.txtTituloProdFinal.text = null

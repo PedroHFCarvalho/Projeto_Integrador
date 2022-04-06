@@ -1,6 +1,9 @@
 package com.carvalho.pi
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
+import android.text.InputType
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,9 +11,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.EditText
 import android.widget.Toast
+import androidx.core.view.marginStart
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
 import com.carvalho.pi.databinding.FragmentPostagemBinding
 import com.carvalho.pi.model.Categoria
 import com.carvalho.pi.model.Produto
@@ -22,6 +28,7 @@ class PostagemFragment : Fragment() {
     private val viewModel: MainViewModel by activityViewModels()
     private var idCategSelect = 0L
     private var qtdSelect = 0
+    private var url = ""
 
 
     override fun onCreateView(
@@ -48,18 +55,44 @@ class PostagemFragment : Fragment() {
             }
 
         }
+        binding.imgProd.setOnClickListener {
+
+            val builder: AlertDialog.Builder = AlertDialog.Builder(context)
+            builder.setTitle("URL de imagem")
+
+            val input = EditText(context)
+            input.hint = "Coloque a Url da imagem do produto"
+            input.inputType = InputType.TYPE_CLASS_TEXT
+            builder.setView(input)
+
+            builder.setPositiveButton("OK") { _, _ ->
+                url = input.text.toString()
+                Glide.with(this)
+                    .load(url)
+                    .placeholder(R.drawable.placeholder)
+                    .into(binding.imgProd)
+
+            }
+            builder.setNegativeButton("Cancelar") { dialog, _ ->
+                dialog.cancel()
+            }
+
+            builder.show()
+        }
+
 
         return binding.root
     }
 
-    fun setSpineerQuantidade(){
+    fun setSpineerQuantidade() {
 
-        var listaQuantidade = listOf (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+        var listaQuantidade = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
 
         binding.spnrQtd.adapter = ArrayAdapter(
             requireContext(),
             androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
-            listaQuantidade)
+            listaQuantidade
+        )
 
         binding.spnrQtd.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
@@ -98,18 +131,27 @@ class PostagemFragment : Fragment() {
     }
 
 
-    fun addProd(){
+    fun addProd() {
         val nomeMarca = binding.textName.text.toString()
         val descricao = binding.eTextDescricao.text.toString()
-        val imagem = binding.imgProd.drawable.toString()
+        val imagem = url
         val quantidade = qtdSelect
         val valor = binding.eTextValor.text.toString().toDouble()
         val categoria = Categoria(idCategSelect, null)
 
-        viewModel.adicionarProduto(Produto(0L,nomeMarca, descricao, imagem, quantidade, valor, categoria))
+        viewModel.adicionarProduto(
+            Produto(
+                0L,
+                nomeMarca,
+                descricao,
+                imagem,
+                quantidade,
+                valor,
+                categoria
+            )
+        )
 
     }
-
 
 
 }
