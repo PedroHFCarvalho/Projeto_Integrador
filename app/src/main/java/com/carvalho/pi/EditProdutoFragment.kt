@@ -12,7 +12,6 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.carvalho.pi.databinding.FragmentEditProdutoBinding
-import com.carvalho.pi.databinding.FragmentProdutoBinding
 import com.carvalho.pi.model.Categoria
 import com.carvalho.pi.model.Produto
 
@@ -22,7 +21,7 @@ class EditProdutoFragment : Fragment() {
     private lateinit var binding: FragmentEditProdutoBinding
     private val viewModel: MainViewModel by activityViewModels()
     private var produtoSelecionado: Produto? = null
-    private var idCategSelect = 0L
+    private lateinit var categoriaSelect: Categoria
     private var qtdSelect = 0
 
     override fun onCreateView(
@@ -47,7 +46,8 @@ class EditProdutoFragment : Fragment() {
         }
 
         binding.btnEditar.setOnClickListener {
-            editProd()
+
+            viewModel.produtoSelecionado = editProd()
             findNavController().navigate(R.id.action_editProdutoFragment_to_produtoFragment)
             Toast.makeText(context, "Produto Foi Editado com Sucesso", Toast.LENGTH_SHORT).show()
         }
@@ -105,7 +105,8 @@ class EditProdutoFragment : Fragment() {
             binding.spnrCateg.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                     val categSelect = binding.spnrCateg.selectedItem as Categoria
-                    idCategSelect = categSelect.id
+                    categoriaSelect = categSelect
+
                 }
 
                 override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -117,25 +118,26 @@ class EditProdutoFragment : Fragment() {
     }
 
 
-    fun editProd() {
+    fun editProd(): Produto {
         val nomeMarca = binding.textName.text.toString()
         val descricao = binding.eTextDescricao.text.toString()
         val imagem = binding.imgProd.drawable.toString()
-        val quantidade = qtdSelect
+        val quantidade = qtdSelect.toString().toInt()
         val valor = binding.eTextValor.text.toString().toDouble()
-        val categoria = Categoria(idCategSelect, null)
+        val categoria = categoriaSelect
 
-        viewModel.updateProduto(
-            Produto(
-                0L,
-                nomeMarca,
-                descricao,
-                imagem,
-                quantidade,
-                valor,
-                categoria
-            )
+        val produto = Produto(
+            produtoSelecionado?.id!!,
+            nomeMarca,
+            descricao,
+            imagem,
+            quantidade,
+            valor,
+            categoria
         )
+
+        viewModel.updateProduto(produto)
+        return produto
 
     }
 
