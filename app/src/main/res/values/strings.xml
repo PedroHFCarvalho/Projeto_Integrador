@@ -160,5 +160,13 @@
     <string name="Emaillogin">Digite seu Login</string>
     <string name="LoginPassword">Digite sua Senha</string>
     <string name="botaoEntrar">Entrar</string>
+    <string name = "finalizar">Finalizar</string>
     <string name="RecuperarSenha">Esqueceu sua senha?</string>
+    <string name="AuxSenha">Auxílio de Senha</string>
+    <string name="AuxDescript">Será enviado um e-mail com as informações e o link para recuperação de senha caso exista uma conta associada a ele</string>
+    <string name="InsertEmail">Digite o e-mail associado a sua conta:</string>
+    <string name="e_mailRecover">E-Mail</string>
+    <string name="ContinuarEmail">Enviar</string>
+    <string name="ProblemaEmail">Seu endereço de e-mail foi alterado?</string>
+    <string name="InfoProblemaEmail">Se você não usa mais o endereço de e-mail associado a conta ou esqueceu ele, entre em contato com o Serviço de Atendimento ao Cliente para ajudar a restaurar o seu acesso.</string>
 </resources>

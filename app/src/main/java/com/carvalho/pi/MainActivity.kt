@@ -29,8 +29,6 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar) // Adiciona a ToolBar no lugar da ActionBar
         supportActionBar?.setDisplayHomeAsUpEnabled(true) //Adiciona a Arrow na ToolBar
 
-
-
         val navController =
             findNavController(com.carvalho.pi.R.id.fragmentContainerView) // Identifica o navController com base no fragmenteView
         binding.nvView.setupWithNavController(navController)// Set o NavController
