@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.carvalho.pi.databinding.FragmentLoginBinding
 
 import com.carvalho.pi.R
@@ -45,6 +46,7 @@ class LoginFragment : Fragment() {
         val passwordEditText = binding.editTPassword
         val loginButton = binding.bttnLogin
         val loadingProgressBar = binding.loadingPB
+        val esqueceuSenha = binding.textEsqueceu
 
         loginViewModel.loginFormState.observe(viewLifecycleOwner,
             Observer { loginFormState ->
@@ -106,6 +108,11 @@ class LoginFragment : Fragment() {
                 usernameEditText.text.toString(),
                 passwordEditText.text.toString()
             )
+            findNavController().navigate(R.id.action_loginFragment_to_paginaPrincipal)
+        }
+
+        esqueceuSenha.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_esqueceuSenhaFragment)
         }
     }
 
