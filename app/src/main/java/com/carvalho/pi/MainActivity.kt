@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true) //Adiciona a Arrow na ToolBar
 
 
+
         val navController =
             findNavController(com.carvalho.pi.R.id.fragmentContainerView) // Identifica o navController com base no fragmenteView
         binding.nvView.setupWithNavController(navController)// Set o NavController
@@ -104,4 +105,7 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    fun contextActivity(): MainActivity{
+        return this
+    }
 }

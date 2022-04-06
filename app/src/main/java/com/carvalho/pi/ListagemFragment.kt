@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -94,7 +95,9 @@ class ListagemFragment : Fragment(), ProdItemClickListener {
 
     override fun onProdClicked(produto: Produto) {
         viewModel.produtoSelecionado = produto
-        findNavController().navigate(R.id.action_listagemFragment_to_produtoFragment)
+        findNavController().navigate(R.id.action_listagemFragment_to_produtoFragment, null,
+            NavOptions.Builder().setPopUpTo(R.id.produtoFragment, true)
+                .build())
     }
 
 
