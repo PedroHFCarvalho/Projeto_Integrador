@@ -124,7 +124,10 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_esqueceuSenhaFragment2"
+            android:id="@+id/action_loginFragment_to_esqueceuSenhaFragment"
             app:destination="@id/esqueceuSenhaFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_paginaPrincipal"
+            app:destination="@id/paginaPrincipal" />
     </fragment>
 </navigation>
