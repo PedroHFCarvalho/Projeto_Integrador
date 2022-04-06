@@ -41,6 +41,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <ImageButton
+                android:id="@+id/btnEditPreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/editar"
+                android:minHeight="48dp"
+                android:src="@drawable/ic_baseline_edit_24" />
+
             <TextView
                 android:id="@+id/textNamePreview"
                 android:layout_width="match_parent"
@@ -100,17 +111,6 @@
                 android:minHeight="48dp"
                 android:textColorHint="#757575"
                 android:textSize="18sp" />
-
-            <ImageButton
-                android:id="@+id/btnEditPreview"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:backgroundTint="#00FFFFFF"
-                android:contentDescription="@string/editar"
-                android:minHeight="48dp"
-                android:src="@drawable/ic_baseline_edit_24" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

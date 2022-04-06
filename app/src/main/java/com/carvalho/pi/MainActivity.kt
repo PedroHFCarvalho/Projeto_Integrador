@@ -4,6 +4,7 @@ import android.R
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -24,7 +25,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
-
 
         setSupportActionBar(binding.toolbar) // Adiciona a ToolBar no lugar da ActionBar
         supportActionBar?.setDisplayHomeAsUpEnabled(true) //Adiciona a Arrow na ToolBar

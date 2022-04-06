@@ -117,7 +117,11 @@
         android:id="@+id/posCompraFragment"
         android:name="com.carvalho.pi.PosCompraFragment"
         android:label="fragment_pos_compra"
-        tools:layout="@layout/fragment_pos_compra" />
+        tools:layout="@layout/fragment_pos_compra" >
+        <action
+            android:id="@+id/action_posCompraFragment_to_listagemFragment"
+            app:destination="@id/listagemFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.carvalho.pi.ui.login.LoginFragment"
