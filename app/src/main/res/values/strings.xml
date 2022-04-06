@@ -155,5 +155,6 @@
     <string name="Emaillogin">Digite seu Login</string>
     <string name="LoginPassword">Digite sua Senha</string>
     <string name="botaoEntrar">Entrar</string>
+    <string name = "finalizar">Finalizar</string>
     <string name="RecuperarSenha">Esqueceu sua senha?</string>
 </resources>
