@@ -169,4 +169,10 @@
     <string name="ContinuarEmail">Enviar</string>
     <string name="ProblemaEmail">Seu endereço de e-mail foi alterado?</string>
     <string name="InfoProblemaEmail">Se você não usa mais o endereço de e-mail associado a conta ou esqueceu ele, entre em contato com o Serviço de Atendimento ao Cliente para ajudar a restaurar o seu acesso.</string>
+    <string name="CadastroInfo">Para prosseguir preencha todos os campos abaixo:</string>
+    <string name="BotaoCadastro">Cadastrar</string>
+    <string name="TermosDeUso">Ao criar uma conta, você concorda com as Condições de Uso da ReComerce. Por Favor, verifique a Notificação de Privacidade, Notificação de Cookies e a Notificação de Anúncios Baseados em Interesse.</string>
+    <string name="nomeCAD">Nome</string>
+    <string name="emailCAD">Email</string>
+    <string name="senhaCAD">Senha</string>
 </resources>
