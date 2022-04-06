@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.carvalho.pi.databinding.FragmentPosCompraBinding
 import com.carvalho.pi.model.Produto
@@ -31,7 +32,11 @@ class PosCompraFragment : Fragment() {
 
             if (validaCampos(binding.eTxtEnderFinal.text.toString())) {
                 Toast.makeText(context, "A Compra foi finalizada", Toast.LENGTH_SHORT).show()
-                findNavController().navigate(R.id.action_posCompraFragment_to_listagemFragment)
+                findNavController().navigate(
+                    R.id.action_posCompraFragment_to_listagemFragment, null,
+                    NavOptions.Builder().setPopUpTo(R.id.posCompraFragment, true)
+                        .build()
+                )
             } else {
                 Toast.makeText(context, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
             }

@@ -11,6 +11,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.carvalho.pi.databinding.FragmentEditProdutoBinding
 import com.carvalho.pi.model.Categoria
@@ -48,11 +49,14 @@ class EditProdutoFragment : Fragment() {
 
             builder.setPositiveButton("Deletar") { _, _ ->
                 viewModel.deleteProduto(viewModel.produtoSelecionado!!.id)
-                findNavController().navigate(R.id.action_editProdutoFragment_to_listagemFragment)
-                Toast.makeText(context, "Produto Foi Deletado com Sucesso", Toast.LENGTH_SHORT).show()
+                findNavController().navigate(R.id.action_editProdutoFragment_to_listagemFragment, null,
+                    NavOptions.Builder().setPopUpTo(R.id.editProdutoFragment, true)
+                        .build())
+                Toast.makeText(context, "Produto Foi Deletado com Sucesso", Toast.LENGTH_SHORT)
+                    .show()
             }
 
-            builder.setNegativeButton("Cancelar") { _, _  ->
+            builder.setNegativeButton("Cancelar") { _, _ ->
                 Toast.makeText(context, "Produto Não Foi Deletado", Toast.LENGTH_SHORT).show()
             }
 
@@ -62,7 +66,11 @@ class EditProdutoFragment : Fragment() {
         binding.btnEditar.setOnClickListener {
 
             viewModel.produtoSelecionado = editProd()
-            findNavController().navigate(R.id.action_editProdutoFragment_to_produtoFragment)
+            findNavController().navigate(
+                R.id.action_editProdutoFragment_to_produtoFragment, null,
+                NavOptions.Builder().setPopUpTo(R.id.editProdutoFragment, true)
+                    .build()
+            )
             Toast.makeText(context, "Produto Foi Editado com Sucesso", Toast.LENGTH_SHORT).show()
         }
 

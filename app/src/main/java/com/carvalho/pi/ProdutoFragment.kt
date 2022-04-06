@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.carvalho.pi.databinding.FragmentPostagemBinding
 import com.carvalho.pi.databinding.FragmentProdutoBinding
@@ -30,12 +31,20 @@ class ProdutoFragment : Fragment() {
         viewModel.listarCategoria()
 
         binding.btnEditPreview.setOnClickListener {
-            findNavController().navigate(R.id.action_produtoFragment_to_editProdutoFragment)
+            findNavController().navigate(
+                R.id.action_produtoFragment_to_editProdutoFragment, null,
+                NavOptions.Builder().setPopUpTo(R.id.editProdutoFragment, true)
+                    .build()
+            )
 
         }
 
         binding.btnComprarPreview.setOnClickListener {
-            findNavController().navigate(R.id.action_produtoFragment_to_posCompraFragment)
+            findNavController().navigate(
+                R.id.action_produtoFragment_to_posCompraFragment, null,
+                NavOptions.Builder().setPopUpTo(R.id.posCompraFragment, true)
+                    .build()
+            )
         }
 
         return binding.root
@@ -48,7 +57,8 @@ class ProdutoFragment : Fragment() {
             binding.textNamePreview.text = produtoSelecionado?.nomeMarca
             binding.eTextDescricaoPreview.text = produtoSelecionado?.descricao
             //binding.imgProd.setImageDrawable(produtoSelecionado?.imagem)
-            binding.textCategoriaPreview.text = "Categoria ${produtoSelecionado?.categoria?.descricao.toString()}"
+            binding.textCategoriaPreview.text =
+                "Categoria ${produtoSelecionado?.categoria?.descricao.toString()}"
             binding.textQtdPreview.text = "Quantidade ${produtoSelecionado?.quantidade.toString()}"
             binding.eTextValorPreview.text = produtoSelecionado?.valor.toString()
         } else {

@@ -103,4 +103,7 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    fun contextActivity(): MainActivity{
+        return this
+    }
 }

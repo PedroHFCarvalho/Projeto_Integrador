@@ -11,12 +11,15 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
+import com.carvalho.pi.databinding.ActivityMainBinding
 import com.carvalho.pi.databinding.FragmentInicioBinding
 
 class Inicio : Fragment() {
 
     private lateinit var  binding: FragmentInicioBinding
+
     private val viewModel: MainViewModel by activityViewModels()
+
 
     override fun onCreateView(
         inflater:LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -42,7 +45,7 @@ class Inicio : Fragment() {
         binding.bttnSkip.setOnClickListener {
 
             findNavController().navigate(R.id.action_inicioFragment_to_paginaPrincipal,null,
-                NavOptions.Builder().setPopUpTo(R.id.paginaPrincipal, true)
+                NavOptions.Builder().setPopUpTo(R.id.inicioFragment, true)
                     .build())
 
         }
