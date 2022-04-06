@@ -1,15 +1,18 @@
 package com.carvalho.pi.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.carvalho.pi.MainViewModel
 import com.carvalho.pi.R
 import com.carvalho.pi.model.Produto
 
-class AdapterProduto (private val prodItemClickListener : ProdItemClickListener, private val viewModel : MainViewModel) : RecyclerView.Adapter<AdapterProduto.ProdutoViewHolder>() {
+class AdapterProduto (private val prodItemClickListener : ProdItemClickListener, private val viewModel : MainViewModel, val context: Context) : RecyclerView.Adapter<AdapterProduto.ProdutoViewHolder>() {
 
     var listProduto = emptyList<Produto>()
 
@@ -18,7 +21,7 @@ class AdapterProduto (private val prodItemClickListener : ProdItemClickListener,
         val titulo = view.findViewById<TextView>(R.id.textTituloCard)
         val descricao = view.findViewById<TextView>(R.id.textDescricaoCard)
         val valor = view.findViewById<TextView>(R.id.textValorCard)
-        // val img = view.findViewById<ImageView>(R.id.imgProdCard)
+        val img = view.findViewById<ImageView>(R.id.imgProdCard)
 
     }
 
@@ -34,6 +37,11 @@ class AdapterProduto (private val prodItemClickListener : ProdItemClickListener,
         holder.descricao.text = listProduto[position].descricao
         holder.valor.text = "R$ ${listProduto[position].valor}"
        // holder.img.setImageResource(listProduto[position].img.toInt())
+
+        Glide.with(context)
+            .load(listProduto[position].imagem)
+            .placeholder(R.drawable.placeholder)
+            .into(holder.img)
 
         holder.itemView.setOnClickListener{
             prodItemClickListener.onProdClicked(listProduto[position])

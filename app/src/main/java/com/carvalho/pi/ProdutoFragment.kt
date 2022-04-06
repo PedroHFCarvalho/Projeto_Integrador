@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
 import com.carvalho.pi.databinding.FragmentPostagemBinding
 import com.carvalho.pi.databinding.FragmentProdutoBinding
 import com.carvalho.pi.model.Produto
@@ -56,7 +57,7 @@ class ProdutoFragment : Fragment() {
         if (produtoSelecionado != null) {
             binding.textNamePreview.text = produtoSelecionado?.nomeMarca
             binding.eTextDescricaoPreview.text = produtoSelecionado?.descricao
-            //binding.imgProd.setImageDrawable(produtoSelecionado?.imagem)
+            Glide.with(this).load(produtoSelecionado?.imagem).placeholder(R.drawable.placeholder).into(binding.imgProdPreview)
             binding.textCategoriaPreview.text =
                 "Categoria ${produtoSelecionado?.categoria?.descricao.toString()}"
             binding.textQtdPreview.text = "Quantidade ${produtoSelecionado?.quantidade.toString()}"
@@ -64,7 +65,7 @@ class ProdutoFragment : Fragment() {
         } else {
             binding.textNamePreview.text = null
             binding.eTextDescricaoPreview.text = null
-            //binding.imgProd.drawable = null
+            Glide.with(this).load(produtoSelecionado?.imagem).placeholder(R.drawable.placeholder).into(binding.imgProdPreview)
             binding.eTextValorPreview.text = null
         }
     }

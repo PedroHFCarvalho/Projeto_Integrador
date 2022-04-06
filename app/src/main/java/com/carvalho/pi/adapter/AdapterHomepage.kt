@@ -1,15 +1,18 @@
 package com.carvalho.pi.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.carvalho.pi.MainViewModel
 import com.carvalho.pi.R
 import com.carvalho.pi.model.Produto
 
-class AdapterHomepage(private val prodItemClickListener : ProdItemClickListener, private val viewModel : MainViewModel) : RecyclerView.Adapter<AdapterHomepage.HomeViewHolder>() {
+class AdapterHomepage(private val prodItemClickListener : ProdItemClickListener, private val viewModel : MainViewModel, var context: Context) : RecyclerView.Adapter<AdapterHomepage.HomeViewHolder>() {
 
     var listProduto = emptyList<Produto>()
 
@@ -17,7 +20,7 @@ class AdapterHomepage(private val prodItemClickListener : ProdItemClickListener,
 
         val titulo = view.findViewById<TextView>(R.id.txtNomeCardHome)
         val valor = view.findViewById<TextView>(R.id.txtValorCardHome)
-        // val img = view.findViewById<ImageView>(R.id.imgProdCard)
+        val img = view.findViewById<ImageView>(R.id.imgProdCardHome)
 
     }
 
@@ -33,6 +36,16 @@ class AdapterHomepage(private val prodItemClickListener : ProdItemClickListener,
         holder.titulo.text = listProduto[position].nomeMarca
         holder.valor.text = "R$ ${listProduto[position].valor}"
         // holder.img.setImageResource(listProduto[position].img)
+
+        Glide.with(context)
+            .load(listProduto[position].imagem)
+            .placeholder(R.drawable.placeholder)
+            .into(holder.img)
+
+        holder.itemView.setOnClickListener{
+            prodItemClickListener.onProdClicked(listProduto[position])
+        }
+
 
         holder.itemView.setOnClickListener{
             prodItemClickListener.onProdClicked(listProduto[position])

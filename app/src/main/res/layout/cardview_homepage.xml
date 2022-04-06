@@ -16,7 +16,7 @@
         android:padding="5dp">
 
         <ImageView
-            android:id="@+id/imgProdCardHme"
+            android:id="@+id/imgProdCardHome"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -39,7 +39,7 @@
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgProdCardHme"
+            app:layout_constraintTop_toBottomOf="@+id/imgProdCardHome"
             tools:text="@string/nome_do_produto" />
 
         <TextView

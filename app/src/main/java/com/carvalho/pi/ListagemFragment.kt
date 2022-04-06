@@ -38,7 +38,7 @@ class ListagemFragment : Fragment(), ProdItemClickListener {
     ): View? {
         binding = FragmentListagemBinding.inflate(layoutInflater, container, false)
 
-        val adapteProd = AdapterProduto(this, viewModel)
+        val adapteProd = AdapterProduto(this, viewModel, requireContext())
 
         viewModel.listarProduto()
         viewModel.listarCategoria()
@@ -49,10 +49,8 @@ class ListagemFragment : Fragment(), ProdItemClickListener {
 
         viewModel.responseProduto.observe(viewLifecycleOwner) {
             if (it != null) {
-
                 newlist = it.body()!!
                 adapteProd.setLista(newlist)
-
             }
             Log.d("Req", it.body().toString())
         }
