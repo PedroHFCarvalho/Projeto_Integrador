@@ -13,7 +13,7 @@
         android:layout_height="0dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
-        android:text="@string/finalizar"
+        android:text="Finalizar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -65,7 +65,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/endere_o"
+        android:text="Endereço"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgProdutoFinal" />
@@ -93,7 +93,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/forma_de_pagamento"
+        android:text="Forma de Pagamente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eTxtEnderFinal" />
@@ -105,7 +105,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="32dp"
-        android:entries="@array/pagamentos"
+        android:entries="@array/pagamento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPagamentoFinal"

@@ -49,7 +49,6 @@ class MainViewModel @Inject constructor(private val repository: Repository) : Vi
             try {
                 val response = repository.listaProduto()
                 _responseProduto.value = response
-
             } catch (e: Exception) {
                 Log.d("Err", e.message.toString())
             }

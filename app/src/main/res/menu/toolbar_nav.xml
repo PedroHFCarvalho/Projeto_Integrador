@@ -9,10 +9,10 @@
         android:title="@string/pesquisar"
         />
 
-    <item
+    <!--<item
         android:id="@+id/postagemFragment"
         app:showAsAction="always"
         android:icon="@drawable/ic_baseline_add_24"
-        android:title="@string/adicionar" />
+        android:title="@string/adicionar" />-->
 
 </menu>

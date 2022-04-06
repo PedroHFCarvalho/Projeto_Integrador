@@ -18,14 +18,18 @@ import com.carvalho.pi.databinding.ActivityMainBinding.inflate
 import com.carvalho.pi.databinding.FragmentListagemBinding
 import com.carvalho.pi.model.Produto
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import retrofit2.Response
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 class ListagemFragment : Fragment(), ProdItemClickListener {
 
     private lateinit var binding: FragmentListagemBinding
     private val viewModel: MainViewModel by activityViewModels()
-    private val list = arrayListOf<Produto>()
+
+    private lateinit var newlist: List<Produto>
+    private lateinit var templist: MutableList<Produto>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,16 +42,41 @@ class ListagemFragment : Fragment(), ProdItemClickListener {
         viewModel.listarProduto()
         viewModel.listarCategoria()
 
+        templist = mutableListOf()
+        newlist = mutableListOf()
+
 
         viewModel.responseProduto.observe(viewLifecycleOwner) {
             if (it != null) {
-                adapteProd.setLista(it.body()!!)
+
+                newlist = it.body()!!
+                adapteProd.setLista(newlist)
 
             }
             Log.d("Req", it.body().toString())
         }
 
 
+
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+
+                return false
+            }
+
+            override fun onQueryTextChange(query: String?): Boolean {
+                templist.clear()
+                newlist.forEach {
+                    if (it.nomeMarca!!.contains(query!!, true)) {
+                        templist.add(it)
+                    }
+                }
+                adapteProd.setLista(templist.asReversed())
+
+                return false
+            }
+
+        })
 
         binding.recyclerListProd.layoutManager = LinearLayoutManager(context)
         binding.recyclerListProd.adapter = adapteProd
@@ -67,8 +96,6 @@ class ListagemFragment : Fragment(), ProdItemClickListener {
         viewModel.produtoSelecionado = produto
         findNavController().navigate(R.id.action_listagemFragment_to_produtoFragment)
     }
-
-
 
 
 }

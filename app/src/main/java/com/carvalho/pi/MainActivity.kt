@@ -34,6 +34,14 @@ class MainActivity : AppCompatActivity() {
             findNavController(com.carvalho.pi.R.id.fragmentContainerView) // Identifica o navController com base no fragmenteView
         binding.nvView.setupWithNavController(navController)// Set o NavController
 
+        binding.imgLogo.setOnClickListener {
+            findNavController(com.carvalho.pi.R.id.fragmentContainerView).navigate(
+                com.carvalho.pi.R.id.paginaPrincipal,
+                null,
+                NavOptions.Builder().setPopUpTo(com.carvalho.pi.R.id.paginaPrincipal, true)
+                    .build()
+            )
+        }
 
         //Alterne a configuração para exibir o ícone de hambúrguer com uma boa animação
         val drawerToggle = setupDrawerToggle()
