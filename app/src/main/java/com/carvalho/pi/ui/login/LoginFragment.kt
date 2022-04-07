@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
+import androidx.core.view.isGone
 import androidx.navigation.fragment.findNavController
 import com.carvalho.pi.databinding.FragmentLoginBinding
 
@@ -53,9 +54,9 @@ class LoginFragment : Fragment() {
                 if (loginFormState == null) {
                     return@Observer
                 }
-                loginButton.isEnabled = loginFormState.isDataValid
                 loginFormState.usernameError?.let {
                     usernameEditText.error = getString(it)
+                    loginButton.isEnabled = loginFormState.isDataValid
                 }
                 loginFormState.passwordError?.let {
                     passwordEditText.error = getString(it)
