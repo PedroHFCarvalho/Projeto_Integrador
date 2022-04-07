@@ -90,7 +90,6 @@ class LoginFragment : Fragment() {
                     !(binding.editTPassword.text.toString() == "" || binding.editTPassword.text.toString().length < 5 ||
                         binding.editTUsername.text.toString() == "" || binding.editTUsername.text.toString().length < 5)
 
-                loginButton.isEnabled = false
             }
 
 
