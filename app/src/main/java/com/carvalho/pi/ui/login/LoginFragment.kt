@@ -34,6 +34,10 @@ class LoginFragment : Fragment() {
     ): View? {
 
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
+
+
+        binding.bttnLogin.isEnabled = false
+
         return binding.root
 
     }
@@ -42,6 +46,7 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
             .get(LoginViewModel::class.java)
+
 
         val usernameEditText = binding.editTUsername
         val passwordEditText = binding.editTPassword
@@ -77,11 +82,14 @@ class LoginFragment : Fragment() {
 
         val afterTextChangedListener = object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
-                // ignore
+
             }
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                // ignore
+                loginButton.isEnabled =
+                    !(binding.editTPassword.text.toString() == "" || binding.editTPassword.text.toString().length < 5 ||
+                        binding.editTUsername.text.toString() == "" || binding.editTUsername.text.toString().length < 5)
+
             }
 
             override fun afterTextChanged(s: Editable) {
