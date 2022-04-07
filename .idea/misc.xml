@@ -32,6 +32,7 @@
         <entry key="..\:/Users/Pedro-PC/Desktop/pi/app/src/main/res/layout/fragment_listagem.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Pedro-PC/Desktop/pi/app/src/main/res/layout/fragment_postagem.xml" value="0.33" />
         <entry key="..\:/Users/SpeeD/Desktop/PJT/Projeto_Integrador/app/src/main/res/layout/activity_main.xml" value="0.33016304347826086" />
+        <entry key="..\:/Users/SpeeD/Desktop/PJT/Projeto_Integrador/app/src/main/res/layout/activity_maps.xml" value="0.1770516717325228" />
         <entry key="..\:/Users/SpeeD/Desktop/PJT/Projeto_Integrador/app/src/main/res/layout/cardview_produto.xml" value="0.33" />
         <entry key="..\:/Users/SpeeD/Desktop/PJT/Projeto_Integrador/app/src/main/res/layout/fragment_cadastro.xml" value="0.33016304347826086" />
         <entry key="..\:/Users/SpeeD/Desktop/PJT/Projeto_Integrador/app/src/main/res/layout/fragment_configuracoes.xml" value="0.33016304347826086" />
@@ -41,8 +42,9 @@
         <entry key="..\:/Users/SpeeD/Desktop/PJT/Projeto_Integrador/app/src/main/res/layout/fragment_listagem.xml" value="0.33016304347826086" />
         <entry key="..\:/Users/SpeeD/Desktop/PJT/Projeto_Integrador/app/src/main/res/layout/fragment_login.xml" value="0.33016304347826086" />
         <entry key="..\:/Users/SpeeD/Desktop/PJT/Projeto_Integrador/app/src/main/res/layout/fragment_pagina_principal.xml" value="0.33016304347826086" />
-        <entry key="..\:/Users/SpeeD/Desktop/PJT/Projeto_Integrador/app/src/main/res/layout/fragment_pos_compra.xml" value="0.14447463768115942" />
+        <entry key="..\:/Users/SpeeD/Desktop/PJT/Projeto_Integrador/app/src/main/res/layout/fragment_pos_compra.xml" value="0.33" />
         <entry key="..\:/Users/SpeeD/Desktop/PJT/Projeto_Integrador/app/src/main/res/layout/fragment_postagem.xml" value="0.33016304347826086" />
+        <entry key="..\:/Users/SpeeD/Desktop/PJT/Projeto_Integrador/app/src/main/res/xml/root_preferences.xml" value="0.3640625" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Projeto_Integrador/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Projeto_Integrador/app/src/main/res/layout/cardview_homepage.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Projeto_Integrador/app/src/main/res/layout/cardview_produto.xml" value="0.22" />
@@ -68,7 +70,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.33" />
+        <option name="scale" value="0.1770516717325228" />
       </ProjectState>
     </option>
   </component>

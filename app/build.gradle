@@ -5,6 +5,10 @@ plugins {
     //Hilt
     id 'dagger.hilt.android.plugin'
     id 'kotlin-kapt'
+
+    //Secret Gradle para armazenamento da API KEY Google Maps
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+
 }
 
 android {
@@ -54,7 +58,10 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.annotation:annotation:1.3.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
-    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'androidx.preference:preference:1.2.0'
+    //Google Map Implementation:
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+    //-------------------------------
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
