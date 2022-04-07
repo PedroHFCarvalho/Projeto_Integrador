@@ -52,14 +52,14 @@
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:queryHint="Pesquise"
         android:layout_margin="10dp"
+        android:background="@drawable/bg_verdeclaro"
         android:iconifiedByDefault="false"
         android:orientation="horizontal"
+        android:queryHint="Pesquise"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/search_background"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 

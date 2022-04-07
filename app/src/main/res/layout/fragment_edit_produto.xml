@@ -55,23 +55,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/placeholder"
+            app:srcCompat="@drawable/imgprod"
             tools:ignore="ImageContrastCheck"
-            tools:srcCompat="@drawable/placeholder" />
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#00FFFFFF"
-            android:clickable="false"
-            android:contentDescription="@string/editar"
-            android:minWidth="12dp"
-            android:minHeight="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_edit_24"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:srcCompat="@drawable/imgprod" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

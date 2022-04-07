@@ -13,7 +13,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:openDrawer="start"
+        >
+
 
         <ImageView
             android:id="@+id/bgMenu"
@@ -69,5 +72,6 @@
             android:layout_gravity="start"
             app:menu="@menu/drawer_nav"
             style="@style/background"/>
+
     </androidx.drawerlayout.widget.DrawerLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
