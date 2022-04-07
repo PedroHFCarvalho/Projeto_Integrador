@@ -7,9 +7,9 @@
     <application
         android:name=".PiAplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label=""
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/icon_green"
+        android:label="Recomercio"
+        android:roundIcon="@drawable/icon_green"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pi">
         <activity
