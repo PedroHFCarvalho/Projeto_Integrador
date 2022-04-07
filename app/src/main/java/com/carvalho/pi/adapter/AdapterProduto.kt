@@ -35,7 +35,7 @@ class AdapterProduto (private val prodItemClickListener : ProdItemClickListener,
 
         holder.titulo.text = listProduto[position].nomeMarca
         holder.descricao.text = listProduto[position].descricao
-        holder.valor.text = "R$ ${listProduto[position].valor}"
+        holder.valor.text =    "R$ ${"%.2f".format(listProduto[position].valor)}"
        // holder.img.setImageResource(listProduto[position].img.toInt())
 
         Glide.with(context)
