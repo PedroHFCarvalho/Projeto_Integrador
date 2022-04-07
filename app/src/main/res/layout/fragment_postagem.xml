@@ -8,6 +8,16 @@
     android:elevation="2dp"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/textName"
         android:layout_width="0dp"
@@ -20,6 +30,7 @@
         android:hint="@string/tituloProduto"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textColor="#004A00"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout"
@@ -100,18 +111,19 @@
         android:autofillHints=""
         android:ems="10"
         android:gravity="start|top"
-        android:hint="@string/descricao"
+        android:hint="Descrição"
         android:inputType="textMultiLine"
         android:maxLines="15"
         android:minLines="3"
         android:singleLine="false"
+        android:textColor="#004A00"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spnrCateg" />
 
     <EditText
         android:id="@+id/eTextValor"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="16dp"
@@ -121,6 +133,12 @@
         android:importantForAutofill="no"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textColor="#004A00"
+        android:textColorHighlight="#CA004A00"
+        android:textColorHint="#BF004A00"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnAdicionar"
         app:layout_constraintStart_toStartOf="parent" />
@@ -132,12 +150,14 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="28dp"
+        android:fontFamily="@font/economica"
         android:letterSpacing="0.1"
         android:paddingLeft="16dp"
         android:paddingTop="4dp"
         android:paddingRight="16dp"
         android:paddingBottom="4dp"
         android:text="@string/adicionar"
+        android:textSize="24sp"
         app:iconPadding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

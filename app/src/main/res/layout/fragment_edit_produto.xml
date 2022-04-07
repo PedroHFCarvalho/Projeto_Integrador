@@ -8,6 +8,18 @@
     android:elevation="2dp"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/bgEditProd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_5"
+        android:contentDescription="@string/imagem_de_fundo_edit_produto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
+
     <EditText
         android:id="@+id/textName"
         android:layout_width="0dp"
@@ -20,7 +32,8 @@
         android:hint="@string/tituloProduto"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:textColorHint="#757575"
+        android:textColor="#004A00"
+        android:textColorHint="#616161"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout"
         app:layout_constraintTop_toTopOf="parent" />
@@ -73,6 +86,7 @@
         android:autofillHints="Q"
         android:entries="@array/quantidade"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout"
         app:layout_constraintTop_toBottomOf="@+id/textName" />
 
@@ -104,15 +118,17 @@
         android:maxLines="15"
         android:minLines="3"
         android:singleLine="false"
+        android:textColor="#004A00"
+        android:textColorHint="#2E7D32"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spnrCateg" />
 
     <EditText
         android:id="@+id/eTextValor"
-        android:layout_width="141dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="32dp"
         android:ems="10"
@@ -120,7 +136,10 @@
         android:importantForAutofill="no"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
-        android:textColorHint="#757575"
+        android:textAlignment="center"
+        android:textColor="#004A00"
+        android:textColorHint="#263238"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnDeletarEdit"
         app:layout_constraintStart_toStartOf="parent" />
@@ -130,16 +149,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/economica"
         android:letterSpacing="0.1"
         android:paddingLeft="16dp"
         android:paddingTop="4dp"
         android:paddingRight="16dp"
         android:paddingBottom="4dp"
         android:text="@string/editar"
+        android:textSize="24sp"
         app:iconPadding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <ImageView
         android:id="@+id/btnDeletarEdit"

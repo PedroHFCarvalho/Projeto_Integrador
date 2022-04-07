@@ -12,29 +12,56 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/imageBg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_4"
+        android:contentDescription="@string/imagem_de_fundo_produto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
         android:id="@+id/imgProdPreview"
-        android:layout_width="336dp"
-        android:layout_height="291dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="100dp"
         android:contentDescription="@string/produto"
         android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imageLogo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/placeholder"
         tools:ignore="ImageContrastCheck"
         tools:srcCompat="@drawable/placeholder" />
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="80dp"
-        android:elevation="2dp"
-        android:fillViewport="true"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="300dp"
+        android:contentDescription="@string/logo_com_borda"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgProdPreview">
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_com_borda" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        android:elevation="2dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/eTextValorPreview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -50,7 +77,8 @@
                 android:backgroundTint="#00FFFFFF"
                 android:contentDescription="@string/editar"
                 android:minHeight="48dp"
-                android:src="@drawable/ic_baseline_edit_24" />
+                android:src="@drawable/ic_baseline_edit_24"
+                app:tint="#004A00" />
 
             <TextView
                 android:id="@+id/textNamePreview"
@@ -64,8 +92,9 @@
                 android:hint="@string/tituloProduto"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
+                android:textColor="#004A00"
                 android:textColorHint="#757575"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/eTextDescricaoPreview"
@@ -80,7 +109,9 @@
                 android:inputType="textMultiLine"
                 android:minHeight="48dp"
                 android:singleLine="false"
-                android:textSize="24dp" />
+                android:textColor="#004A00"
+                android:textColorHint="#8D6E63"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/textCategoriaPreview"
@@ -91,9 +122,10 @@
                 android:layout_marginEnd="20dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="Categoria"
+                android:hint="@string/categoria"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
+                android:textColor="#004A00"
                 android:textColorHint="#757575"
                 android:textSize="18sp" />
 
@@ -106,9 +138,10 @@
                 android:layout_marginEnd="20dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:hint="Quantidade"
+                android:hint="@string/quantidade"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
+                android:textColor="#004A00"
                 android:textColorHint="#757575"
                 android:textSize="18sp" />
 
@@ -119,24 +152,28 @@
         android:id="@+id/btnComprarPreview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
+        android:fontFamily="@font/economica"
         android:letterSpacing="0.1"
         android:paddingLeft="16dp"
         android:paddingTop="4dp"
         android:paddingRight="16dp"
         android:paddingBottom="4dp"
-        android:text="comprar"
+        android:text="@string/comprar"
+        android:textSize="28sp"
         app:iconPadding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/eTextValorPreview"
-        android:layout_width="188dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:background="#F9F2CE"
         android:ems="10"
         android:hint="@string/valor"
         android:importantForAutofill="no"
@@ -144,9 +181,12 @@
         android:minHeight="48dp"
         android:padding="10dp"
         android:textAlignment="center"
-        android:textSize="24dp"
+        android:textColor="#004A00"
+        android:textColorHint="#8D6E63"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnComprarPreview"
         app:layout_constraintStart_toStartOf="parent" />
 
 
