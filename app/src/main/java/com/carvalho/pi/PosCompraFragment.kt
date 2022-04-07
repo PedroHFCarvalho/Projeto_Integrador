@@ -57,7 +57,7 @@ class PosCompraFragment : Fragment() {
         if (produtoSelecionado != null) {
             binding.txtTituloProdFinal.text = produtoSelecionado?.nomeMarca.toString()
             Glide.with(this).load(produtoSelecionado?.imagem).placeholder(R.drawable.placeholder).into(binding.imgProdutoFinal)
-            binding.txtValorFinal.text = produtoSelecionado?.valor.toString()
+            binding.txtValorFinal.text =  "R$ ${"%.2f".format(produtoSelecionado?.valor)}"
         } else {
             binding.txtTituloProdFinal.text = null
             binding.txtValorFinal.text = null

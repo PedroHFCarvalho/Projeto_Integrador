@@ -58,10 +58,9 @@ class ProdutoFragment : Fragment() {
             binding.textNamePreview.text = produtoSelecionado?.nomeMarca
             binding.eTextDescricaoPreview.text = produtoSelecionado?.descricao
             Glide.with(this).load(produtoSelecionado?.imagem).placeholder(R.drawable.placeholder).into(binding.imgProdPreview)
-            binding.textCategoriaPreview.text =
-                "Categoria ${produtoSelecionado?.categoria?.descricao.toString()}"
+            binding.textCategoriaPreview.text = "Categoria ${produtoSelecionado?.categoria?.descricao.toString()}"
             binding.textQtdPreview.text = "Quantidade ${produtoSelecionado?.quantidade.toString()}"
-            binding.eTextValorPreview.text = produtoSelecionado?.valor.toString()
+            binding.eTextValorPreview.text =  "R$ ${"%.2f".format(produtoSelecionado?.valor)}"
         } else {
             binding.textNamePreview.text = null
             binding.eTextDescricaoPreview.text = null

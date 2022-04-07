@@ -34,7 +34,7 @@ class AdapterHomepage(private val prodItemClickListener : ProdItemClickListener,
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
 
         holder.titulo.text = listProduto[position].nomeMarca
-        holder.valor.text = "R$ ${listProduto[position].valor}"
+        holder.valor.text = "R$ ${"%.2f".format(listProduto[position].valor)}"
         // holder.img.setImageResource(listProduto[position].img)
 
         Glide.with(context)
