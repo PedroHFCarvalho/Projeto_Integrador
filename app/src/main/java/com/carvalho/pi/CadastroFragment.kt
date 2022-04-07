@@ -12,7 +12,6 @@ import com.carvalho.pi.databinding.FragmentCadastroBinding
 class CadastroFragment : Fragment() {
 
     private lateinit var binding: FragmentCadastroBinding
-    private var isValid: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
