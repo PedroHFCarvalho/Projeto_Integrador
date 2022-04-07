@@ -63,7 +63,10 @@
         android:layout_marginTop="75dp"
         android:layout_marginEnd="16dp"
         android:enabled="true"
+        android:fontFamily="@font/economica"
         android:text="@string/botaoEntrar"
+        android:textSize="24sp"
+        app:iconTint="#004A00"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textEsqueceu" />
