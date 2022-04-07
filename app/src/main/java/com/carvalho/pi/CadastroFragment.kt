@@ -12,6 +12,7 @@ import com.carvalho.pi.databinding.FragmentCadastroBinding
 class CadastroFragment : Fragment() {
 
     private lateinit var binding: FragmentCadastroBinding
+    private var isValid: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,7 +45,7 @@ class CadastroFragment : Fragment() {
             }else if (senha.isBlank() || senha.length < 8){
             Toast.makeText(context, "Senha Inválida", Toast.LENGTH_SHORT).show()
 
-        }else
+            }else
 
             Toast.makeText(context, "Cadastro Realizado", Toast.LENGTH_LONG).show()
              findNavController().navigate(R.id.action_cadastroFragment_to_loginFragment)
