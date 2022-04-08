@@ -24,7 +24,7 @@
 - [Hilt](https://developer.android.com/training/dependency-injection/hilt-android?hl=pt-br)
 - [Glide](https://github.com/bumptech/glide)
 - [Retrofit](https://square.github.io/retrofit/)
-- [ViewBiding](https://developer.android.com/topic/libraries/view-binding)
+- [ViewBinding](https://developer.android.com/topic/libraries/view-binding)
 
 ---
 
