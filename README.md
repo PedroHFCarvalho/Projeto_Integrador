@@ -3,7 +3,7 @@
     <h1>Recomércio </h1>
 </div>
 
-## 📔 Sobre:
+# 📔 Sobre:
 
 ## Recomércio
 - O Recomércio é um e-commerce tem como objetivo dar a oportunidade de renda autônoma variável para as pessoas de todas as classes, utilizando de recursos recicláveis ou dispensáveis sendo em venda direta do produto bruto ou realizando algum tipo de artesanato.
