@@ -12,6 +12,10 @@
 #### Por que?
 - O fortalecimento da cadeia de reciclagem gera benefícios econômicos e ambientais para todo o Brasil, e o aumento na produtividade gera renda para milhares de famílias.
 
+## Recomércio
+
+- O Recomércio é um e-commerce tem como objetivo dar a oportunidade de renda autônoma variável para as pessoas de todas as classes, utilizando de recursos recicláveis ou dispensáveis sendo em venda direta do produto bruto ou realizando algum tipo de artesanato.
+
 ### Integrantes do grupo de desenvolvimento:</br></br>
 
 - [Gabriele Viana](https://github.com/Gabigrr)
