@@ -19,7 +19,7 @@
 ### Integrantes do grupo de desenvolvimento:</br></br>
 
 - [Gabriele Viana](https://github.com/Gabigrr)
-- [Celina Alcantra](https://github.com/celinaalcantara)
+- [Celina Alcantara](https://github.com/celinaalcantara)
 - [Steve Harris](https://github.com/SPDHRRS)
 - [Pedro Carvalho](https://github.com/PedroHFCarvalho)
 
