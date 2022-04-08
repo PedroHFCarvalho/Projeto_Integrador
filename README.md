@@ -37,9 +37,9 @@
 
 
 
-## 🚀 Como Executar
+## 🚀 Como Executar:
 
-Clone a aplicação
+Clone a aplicação:
 
 ```bash
 $ git clone https://github.com/PedroHFCarvalho/Projeto_Integrador
