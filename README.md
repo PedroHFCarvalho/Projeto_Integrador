@@ -5,11 +5,11 @@
 
 ## 📔 Sobre:
     
-# Tema a ser trabalhado
+#### Tema a ser trabalhado
 - Criar alternativa viável para que pessoas  resgatem suas fontes de renda, além de promover a conservação do meio ambiente pela reutilização dos materiais em circulação.
-# Como?
+#### Como?
 - Com a criação de uma plataforma que facilita a venda de artesanatos e materiais recicláveis. Possibilitando a venda de forma mais rápida e mais rentável.
-# Por que?
+#### Por que?
 - O fortalecimento da cadeia de reciclagem gera benefícios econômicos e ambientais para todo o Brasil, e o aumento na produtividade gera renda para milhares de famílias.
 
 ### Integrantes do grupo de desenvolvimento:</br></br>
