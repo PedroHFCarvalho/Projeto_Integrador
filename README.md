@@ -28,6 +28,12 @@
 
 ---
 
+## 📝 Funcionalidades:
+
+
+--
+
+
 ## 🚀 Como Executar
 
 Clone a aplicação
