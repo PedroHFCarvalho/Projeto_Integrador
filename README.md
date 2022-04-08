@@ -38,26 +38,23 @@
 ---
 
 ## 📝 Funcionalidades:
--
+- Tela de Login e/ou Cadastro no app
 <div align="left">
     <img  style="width:30%" src="Public/BemVindo.png" />
 </div>
-#####
+- Tela de Login
 <div align="left">
     <img  style="width:30%" src="Public/Login.png" />
 </div>
--
+- Cadastro no app
 <div align="left">
     <img  style="width:30%" src="Public/Cadastro.png" />
 </div>
--
-<div align="left">
-    <img  style="width:30%" src="Public/RecuperandoSenha.png" />
-</div>
--
+- Homepage
 <div align="left">
     <img  style="width:30%" src="Public/ListagemDosProdutos.png" />
 </div>
+
 ## 🚀 Como Executar:
 
 Clone a aplicação:
