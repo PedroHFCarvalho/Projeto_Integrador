@@ -4,16 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout4"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".CadastroFragment" >
+    android:layout_height="wrap_content"
+    tools:context=".CadastroFragment">
 
     <TextView
         android:id="@+id/textVCadastro"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/CadastroInfo"
-        android:textColor="#000000"
+        android:textAlignment="center"
+        android:textColor="#004A00"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,6 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/nomeCAD"
         android:inputType="textPersonName"
@@ -32,14 +36,14 @@
         android:textColorHint="#80000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textVCadastro"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/textVCadastro" />
 
     <EditText
         android:id="@+id/editTxtCDEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/emailCAD"
         android:inputType="textEmailAddress"
@@ -47,8 +51,7 @@
         android:textColorHint="#80000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTxtCDName"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/editTxtCDName" />
 
     <EditText
         android:id="@+id/editTxtCDPassword"
@@ -70,23 +73,28 @@
         android:id="@+id/bttnCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/economica"
         android:text="@string/BotaoCadastro"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTxtCDPassword" />
 
     <TextView
         android:id="@+id/textVTermos"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="80dp"
         android:text="@string/TermosDeUso"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#CC004A00"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bttnCadastro" />
 </androidx.constraintlayout.widget.ConstraintLayout>
