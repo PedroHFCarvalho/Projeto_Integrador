@@ -9,14 +9,16 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/bgPostagem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_5"
+        android:contentDescription="Imagem de fundo postagem"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
 
     <EditText
         android:id="@+id/textName"
@@ -31,7 +33,7 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="#004A00"
-        android:textColorHint="#757575"
+        android:textColorHint="#616161"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout"
         app:layout_constraintTop_toTopOf="parent" />
@@ -98,12 +100,13 @@
         android:autofillHints=""
         android:ems="10"
         android:gravity="start|top"
-        android:hint="Descrição"
+        android:hint="@string/descricao"
         android:inputType="textMultiLine"
         android:maxLines="15"
         android:minLines="3"
         android:singleLine="false"
         android:textColor="#004A00"
+        android:textColorHint="#2E7D32"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spnrCateg" />
@@ -123,7 +126,7 @@
         android:textAlignment="center"
         android:textColor="#004A00"
         android:textColorHighlight="#CA004A00"
-        android:textColorHint="#BF004A00"
+        android:textColorHint="#004D40"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

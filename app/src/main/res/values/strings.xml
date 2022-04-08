@@ -182,4 +182,10 @@
     <string name="categoria">categoria</string>
     <string name="quantidade">quantidade</string>
     <string name="comprar">comprar</string>
+    <string name="imagem_de_fundo_menu">imagem de fundo menu</string>
+    <string name="descricao">Descrição</string>
+    <string name="todo">TODO</string>
+    <string name="home">Home</string>
+    <string name="perfil">Perfil</string>
+    <string name="adicionar_produto">Adicionar Produto</string>
 </resources>
