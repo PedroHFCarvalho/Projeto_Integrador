@@ -55,6 +55,13 @@
     <img  style="width:30%" src="Public/ProdutoEscolhido.png" />
 </div>
 
+- Cadastro do produto/anúncio
+- Tela de Login e/ou Cadastro no app
+- Tela de cadastro
+- Edição e exclusão do anúncio 
+- Homepage
+- Recuperação de senha
+- Preview do produto
 
 ## 🚀 Como Executar:
 
