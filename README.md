@@ -40,7 +40,7 @@
 ## 📝 Funcionalidades:
 ##### --
 <div align="center">
-    <img  style="width:80%" src="Public/BemVindo.png" />
+    <img  style="width:30%" src="Public/BemVindo.png" />
     <h1>Recomércio </h1>
 </div>
 
