@@ -43,8 +43,26 @@
     <img  style="width:30%" src="Public/BemVindo.png" />
     <h1>Recomércio </h1>
 </div>
-
-
+-
+<div align="left">
+    <img  style="width:30%" src="Public/Login.png" />
+    <h1>Recomércio </h1>
+</div>
+-
+<div align="left">
+    <img  style="width:30%" src="Public/Cadastro.png" />
+    <h1>Recomércio </h1>
+</div>
+-
+<div align="left">
+    <img  style="width:30%" src="Public/RecuperandoSenha.png" />
+    <h1>Recomércio </h1>
+</div>
+-
+<div align="left">
+    <img  style="width:30%" src="Public/ListagemDosProdutos.png" />
+    <h1>Recomércio </h1>
+</div>
 ## 🚀 Como Executar:
 
 Clone a aplicação:
