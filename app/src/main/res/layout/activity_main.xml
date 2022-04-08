@@ -14,7 +14,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:openDrawer="start"
         >
 
 
@@ -23,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_menu"
-            android:contentDescription="imagem de fundo menu" />
+            android:contentDescription="@string/imagem_de_fundo_menu" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -67,11 +66,16 @@
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/nvView"
+            style="@style/background"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start"
-            app:menu="@menu/drawer_nav"
-            style="@style/background"/>
+            android:background="@drawable/bg_8"
+            android:paddingTop="10dp"
+            app:itemIconTint="@color/primaryColor"
+            app:itemTextAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:itemTextColor="@color/primaryColor"
+            app:menu="@menu/drawer_nav" />
 
     </androidx.drawerlayout.widget.DrawerLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

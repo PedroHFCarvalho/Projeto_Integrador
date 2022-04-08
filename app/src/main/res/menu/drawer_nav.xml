@@ -4,17 +4,23 @@
 
     <item
         android:id="@+id/paginaPrincipal"
-        android:title="Home"
-        android:icon="@drawable/ic_baseline_home_24"/>
+        android:icon="@drawable/ic_baseline_home_24"
+        android:iconTint="#004A00"
+        android:textSize="20sp"
+        android:title="@string/home" />
 
     <item
         android:id="@+id/postagemFragment"
-        android:title="Adcionar Produto"
-        android:icon="@drawable/ic_baseline_add_24"/>
+        android:icon="@drawable/ic_baseline_add_24"
+        android:iconTint="#004A00"
+        android:textSize="20sp"
+        android:title="@string/adicionar_produto" />
 
     <item
         android:id="@+id/inicioFragment"
-        android:title="Perfil"
-        android:icon="@drawable/ic_baseline_person_24"/>
+        android:icon="@drawable/ic_baseline_person_24"
+        android:iconTint="#004A00"
+        android:textSize="20sp"
+        android:title="@string/perfil" />
 
 </menu>
