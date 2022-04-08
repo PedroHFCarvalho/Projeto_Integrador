@@ -1,5 +1,5 @@
 <div align="center">
-    <img  style="width:80%" src="app/src/main/res/drawable/logosplash.png" />
+    <img  style="width:80%" src="app/src/main/res/drawable/logo_white.png" />
     <h1>Recomercio </h1>
 </div>
 
