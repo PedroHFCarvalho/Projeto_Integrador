@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout4"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".CadastroFragment" >
+    android:layout_height="wrap_content"
+    tools:context=".CadastroFragment">
 
     <TextView
         android:id="@+id/textVCadastro"
@@ -28,6 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/nomeCAD"
         android:inputType="textPersonName"
@@ -35,14 +36,14 @@
         android:textColorHint="#80000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textVCadastro"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/textVCadastro" />
 
     <EditText
         android:id="@+id/editTxtCDEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/emailCAD"
         android:inputType="textEmailAddress"
@@ -50,8 +51,7 @@
         android:textColorHint="#80000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTxtCDName"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/editTxtCDName" />
 
     <EditText
         android:id="@+id/editTxtCDPassword"
@@ -73,7 +73,7 @@
         android:id="@+id/bttnCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/economica"
         android:text="@string/BotaoCadastro"
         android:textSize="24sp"
@@ -88,10 +88,12 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="40dp"
+        android:layout_marginBottom="80dp"
         android:text="@string/TermosDeUso"
         android:textAlignment="center"
         android:textColor="#CC004A00"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bttnCadastro" />

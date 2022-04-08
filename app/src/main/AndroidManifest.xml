@@ -32,7 +32,6 @@
             android:name=".maps.MapsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
-        android:theme="@style/Theme.SplashScreen">
         <activity
             android:name=".MainActivity"
             android:exported="true">
