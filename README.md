@@ -38,7 +38,11 @@
 ---
 
 ## 📝 Funcionalidades:
-
+##### --
+<div align="center">
+    <img  style="width:80%" src="Public/BemVindo.png" />
+    <h1>Recomércio </h1>
+</div>
 
 
 ## 🚀 Como Executar:
