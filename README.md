@@ -1,5 +1,5 @@
 <div align="center">
-    <img  style="width:80%" src="public/logo_verde.png" />
+    <img  style="width:80%" src="Public/logo_verde.png" />
     <h1>Recomércio </h1>
 </div>
 
