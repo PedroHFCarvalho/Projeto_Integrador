@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        Thread.sleep(600)
         setTheme(com.carvalho.pi.R.style.Theme_Pi)
 
         super.onCreate(savedInstanceState)
