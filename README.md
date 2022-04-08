@@ -25,7 +25,7 @@
 
 ---
 
-## 🔧 Técnologias:
+# 🔧 Técnologias:
 
 ### Este projeto foi realizado com as seguintes técnologias:</br></br>
 
@@ -37,11 +37,11 @@
 
 ---
 
-## 📝 Funcionalidades:
+# 📝 Funcionalidades:
 
 
 
-## 🚀 Como Executar:
+# 🚀 Como Executar:
 
 Clone a aplicação:
 
