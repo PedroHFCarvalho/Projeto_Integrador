@@ -1,5 +1,5 @@
 <div align="center">
-    <img  style="width:80%" src="app/src/main/res/drawable/logo_white.png" />
+    <img  style="width:80%" src="public/logo_verde.png" />
     <h1>Recomércio </h1>
 </div>
 
