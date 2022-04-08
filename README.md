@@ -5,7 +5,7 @@
 
 ## 📔 Sobre:
     
-- Nosso aplicativo tem com a criação de uma plataforma que facilita a venda de artesanatos e materiais recicláveis. Possibilitando a venda de forma mais rápida e mais rentável.
+- Nosso aplicativo tem com o objetivo a criação de uma plataforma que facilita a venda de artesanatos e materiais recicláveis. Possibilitando a venda de forma mais rápida e mais rentável.
 
 ### Integrantes do grupo de desenvolvimento:</br></br>
 
