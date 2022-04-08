@@ -29,7 +29,7 @@
 
 ### Este projeto foi realizado com as seguintes técnologias:</br></br>
 
-- [Koltin](https://developer.android.com/kotlin?hl=pt&gclid=CjwKCAjwur-SBhB6EiwA5sKtjqqD7CUMO-P4lTkdJpHbCGsZkv7UMkFa_pZGpxIT9G-hevWeYJoipBoC0IMQAvD_BwE&gclsrc=aw.ds)
+- [Kotlin](https://developer.android.com/kotlin?hl=pt&gclid=CjwKCAjwur-SBhB6EiwA5sKtjqqD7CUMO-P4lTkdJpHbCGsZkv7UMkFa_pZGpxIT9G-hevWeYJoipBoC0IMQAvD_BwE&gclsrc=aw.ds)
 - [Hilt](https://developer.android.com/training/dependency-injection/hilt-android?hl=pt-br)
 - [Glide](https://github.com/bumptech/glide)
 - [Retrofit](https://square.github.io/retrofit/)
