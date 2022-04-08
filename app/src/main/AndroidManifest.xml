@@ -11,7 +11,7 @@
         android:label="Recomercio"
         android:roundIcon="@drawable/icon_green"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Pi">
+        android:theme="@style/Theme.SplashScreen">
 
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
