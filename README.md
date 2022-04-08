@@ -3,9 +3,9 @@
     <h1>Recomércio </h1>
 </div>
 
-# 📔 Sobre:
+## 📔 Sobre:
 
-## Recomércio
+### Recomércio
 - O Recomércio é um e-commerce tem como objetivo dar a oportunidade de renda autônoma variável para as pessoas de todas as classes, utilizando de recursos recicláveis ou dispensáveis sendo em venda direta do produto bruto ou realizando algum tipo de artesanato.
 #### Tema a ser trabalhado
 - Criar alternativa viável para que pessoas  resgatem suas fontes de renda, além de promover a conservação do meio ambiente pela reutilização dos materiais em circulação.
@@ -25,7 +25,7 @@
 
 ---
 
-# 🔧 Técnologias:
+## 🔧 Técnologias:
 
 ### Este projeto foi realizado com as seguintes técnologias:</br></br>
 
@@ -37,11 +37,11 @@
 
 ---
 
-# 📝 Funcionalidades:
+## 📝 Funcionalidades:
 
 
 
-# 🚀 Como Executar:
+## 🚀 Como Executar:
 
 Clone a aplicação:
 
