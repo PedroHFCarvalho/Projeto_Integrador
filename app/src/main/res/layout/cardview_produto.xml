@@ -13,13 +13,16 @@
         style="@style/background_card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#FFFFE6"
         android:padding="25dp">
 
         <ImageView
             android:id="@+id/imgProdCard"
-            android:layout_width="105dp"
-            android:layout_height="102dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:contentDescription="@string/todo"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/placeholder"
@@ -30,7 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="5dp"
+            android:maxLines="2"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imgProdCard"
@@ -44,12 +47,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
-            android:maxLines="3"
+            android:maxLines="2"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imgProdCard"
             app:layout_constraintTop_toBottomOf="@+id/textTituloCard"
-            tools:text="@string/descricao" />
+            tools:text="Ut corporis sunt aut dolores galisum aut molestiae veritatis sit quia necessitatibus qui suscipit unde? Sed quas rerum non quisquam doloremque in quam expedita et harum itaque et eveniet officiis?" />
 
         <TextView
             android:id="@+id/textValorCard"
@@ -57,7 +60,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="10dp"
             android:textAlignment="viewEnd"
             android:textSize="20sp"
             android:textStyle="bold"

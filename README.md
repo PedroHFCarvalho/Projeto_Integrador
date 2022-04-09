@@ -43,7 +43,6 @@
 <div align="left">
     <img  style="width:30%" src="Public/BemVindo.png" />
 </div>
-</div>
 
 - Homepage
 <div align="left">

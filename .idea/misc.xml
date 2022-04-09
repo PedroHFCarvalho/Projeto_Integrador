@@ -6,8 +6,9 @@
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/drawable/search_background.xml" value="0.1" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/drawable/splash_bg.xml" value="0.1" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/activity_maps.xml" value="0.36102564102564105" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/cardview_homepage.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/cardview_produto.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/cardview_produto.xml" value="0.5968882602545968" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragmant_toolbar.xml" value="0.29791666666666666" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_cadastro.xml" value="0.22" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_configuracoes.xml" value="0.36666666666666664" />
@@ -19,7 +20,7 @@
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_pagina_principal.xml" value="0.33" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_pos_compra.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_postagem.xml" value="0.33" />
-        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_produto.xml" value="0.33" />
+        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_produto.xml" value="0.5" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_toolbar.xml" value="0.29791666666666666" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/toolbar.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/menu/bottom_nav.xml" value="0.36666666666666664" />
@@ -71,7 +72,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.26268115942028986" />
+        <option name="scale" value="0.5" />
       </ProjectState>
     </option>
   </component>
