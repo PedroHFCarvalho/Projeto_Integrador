@@ -57,9 +57,11 @@ class EditProdutoFragment : Fragment() {
 
             builder.setPositiveButton("Deletar") { _, _ ->
                 viewModel.deleteProduto(viewModel.produtoSelecionado!!.id)
-                findNavController().navigate(R.id.action_editProdutoFragment_to_listagemFragment, null,
+                findNavController().navigate(
+                    R.id.action_editProdutoFragment_to_listagemFragment, null,
                     NavOptions.Builder().setPopUpTo(R.id.editProdutoFragment, true)
-                        .build())
+                        .build()
+                )
                 Toast.makeText(context, "Produto Foi Deletado com Sucesso", Toast.LENGTH_SHORT)
                     .show()
             }
@@ -186,14 +188,16 @@ class EditProdutoFragment : Fragment() {
         if (produtoSelecionado != null) {
             binding.textName.setText(produtoSelecionado?.nomeMarca)
             binding.eTextDescricao.setText(produtoSelecionado?.descricao)
-            Glide.with(this).load(produtoSelecionado?.imagem).placeholder(R.drawable.placeholder).into(binding.imgProd)
+            Glide.with(this).load(produtoSelecionado?.imagem).placeholder(R.drawable.placeholder)
+                .into(binding.imgProd)
             binding.spnrCateg.setText(produtoSelecionado?.categoria?.descricao)
             categoriaSelect = produtoSelecionado!!.categoria
             binding.eTextValor.setText(produtoSelecionado?.valor.toString())
         } else {
             binding.textName.text = null
             binding.eTextDescricao.text = null
-            Glide.with(this).load(produtoSelecionado?.imagem).placeholder(R.drawable.placeholder).into(binding.imgProd)
+            Glide.with(this).load(produtoSelecionado?.imagem).placeholder(R.drawable.placeholder)
+                .into(binding.imgProd)
             binding.eTextValor.text = null
         }
     }
@@ -239,7 +243,12 @@ class EditProdutoFragment : Fragment() {
     fun editProd(): Produto {
         val nomeMarca = binding.textName.text.toString()
         val descricao = binding.eTextDescricao.text.toString()
-        val imagem = url
+        val imagem : String
+            if (url.isNullOrBlank()) {
+                imagem = viewModel.produtoSelecionado?.imagem.toString()
+            } else {
+                imagem = url
+            }
         val quantidade = qtdSelect.toString().toInt()
         val valor = binding.eTextValor.text.toString().toDouble()
         val categoria = categoriaSelect
