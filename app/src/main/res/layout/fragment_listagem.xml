@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bgAreia"
+    android:background="@color/primaryColor"
     tools:context=".ListagemFragment">
 
     <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -31,6 +31,7 @@
         android:backgroundTintMode="screen"
         android:contentDescription="@string/listagem"
         android:hapticFeedbackEnabled="false"
+        android:layout_marginTop="5dp"
         android:paddingTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,15 +43,16 @@
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@color/bgAreia"
-        android:backgroundTint="#AED581"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/search_background"
+        android:backgroundTint="@color/bgAreiaClaro"
         android:backgroundTintMode="screen"
         android:iconifiedByDefault="false"
         android:orientation="horizontal"
-        android:paddingTop="10dp"
-        android:paddingEnd="15dp"
         android:queryHint="Pesquise"
+        android:queryBackground="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

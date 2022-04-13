@@ -56,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/inicioFragment"
-        android:name="com.carvalho.pi.Inicio"
+        android:name="com.carvalho.pi.InicioFragment"
         android:label="fragment_inicio"
         tools:layout="@layout/fragment_inicio" >
         <action
@@ -123,6 +123,9 @@
         <action
             android:id="@+id/action_posCompraFragment_to_listagemFragment"
             app:destination="@id/listagemFragment" />
+        <action
+            android:id="@+id/action_posCompraFragment_to_paginaPrincipal"
+            app:destination="@id/paginaPrincipal" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"

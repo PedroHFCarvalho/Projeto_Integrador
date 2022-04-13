@@ -5,26 +5,28 @@
     style="@style/background_card"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f9f2ce"
+    android:background="@drawable/bg_5"
     android:elevation="50dp"
     android:isScrollContainer="true"
     android:nestedScrollingEnabled="true"
     android:scrollbars="vertical"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.cardview.widget.CardView
         android:id="@+id/constraintLayout2"
         android:layout_width="0dp"
-        android:layout_height="350dp"
+        android:layout_height="300dp"
+        app:cardBackgroundColor="@color/primaryColorDark"
         android:background="@drawable/bg_preview_nologo"
+        app:cardCornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imgProdPreview"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:contentDescription="@string/produto"
@@ -37,23 +39,48 @@
             tools:ignore="ImageContrastCheck"
             tools:srcCompat="@drawable/placeholder" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
     <ImageButton
         android:id="@+id/btnEditPreview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
         android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
         android:layout_marginBottom="5dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/editar"
         android:minHeight="48dp"
         android:src="@drawable/ic_baseline_edit_24"
         app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
         app:tint="#004A00" />
+
+    <TextView
+        android:id="@+id/textNamePreview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/tituloProduto"
+        android:inputType="textMultiLine|textPersonName"
+        android:maxLines="3"
+        android:minHeight="48dp"
+        android:minLines="1"
+        android:paddingTop="5dp"
+        android:textColor="#004A00"
+        android:textColorHint="#757575"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
+        app:layout_constraintEnd_toStartOf="@+id/btnEditPreview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
@@ -71,22 +98,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textNamePreview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="20dp"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/tituloProduto"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:textColor="#004A00"
-                android:textColorHint="#757575"
-                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/eTextDescricaoPreview"
@@ -165,7 +176,6 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:background="#F9F2CE"
         android:ems="10"
         android:hint="@string/valor"
         android:importantForAutofill="no"
@@ -180,16 +190,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnComprarPreview"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-        app:srcCompat="@drawable/logo_com_borda" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,24 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/drawable/custom_search.xml" value="0.2905" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/drawable/search_background.xml" value="0.1" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/drawable/splash_bg.xml" value="0.1" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/activity_maps.xml" value="0.36102564102564105" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/cardview_homepage.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/cardview_produto.xml" value="0.5968882602545968" />
+        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/cardview_produto.xml" value="0.37423312883435583" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragmant_toolbar.xml" value="0.29791666666666666" />
-        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_cadastro.xml" value="0.22" />
+        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_cadastro.xml" value="0.33" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_configuracoes.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_edit_produto.xml" value="0.29791666666666666" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_esqueceu_senha.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_inicio.xml" value="0.24166666666666667" />
-        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_listagem.xml" value="0.4090106007067138" />
-        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_login.xml" value="0.24166666666666667" />
+        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_listagem.xml" value="0.1" />
+        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_login.xml" value="0.1" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_pagina_principal.xml" value="0.33" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_pos_compra.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_postagem.xml" value="0.33" />
-        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_produto.xml" value="0.5" />
+        <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_produto.xml" value="0.5089903181189488" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/fragment_toolbar.xml" value="0.29791666666666666" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/layout/toolbar.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Pedro-PC/Desktop/Projeto_Integrador/app/src/main/res/menu/bottom_nav.xml" value="0.36666666666666664" />
@@ -72,7 +73,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.5" />
+        <option name="scale" value="0.1" />
       </ProjectState>
     </option>
   </component>

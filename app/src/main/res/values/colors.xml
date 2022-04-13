@@ -11,6 +11,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="primaryColor">#1b5e20</color>
+    <color name="primaryColorDark">#123C15</color>
     <color name="primaryLightColor">#13831C</color>
 
     <color name="secondaryColor">#13831C</color>
@@ -20,5 +21,5 @@
     <color name="secondaryTextColor">#ffffff</color>
 
     <color name="bgAreia">#f9f2ce</color>
-    <color name="bgAreiaClaro">#FFFFE6</color>
+    <color name="bgAreiaClaro">#fefcf5</color>
 </resources>

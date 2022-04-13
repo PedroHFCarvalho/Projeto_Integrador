@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    app:cardBackgroundColor="@color/bgAreia"
+    app:cardBackgroundColor="@color/bgAreiaClaro"
     app:cardCornerRadius="20dp"
     app:cardElevation="10dp">
 
@@ -19,7 +19,7 @@
         <ImageView
             android:id="@+id/imgProdCardHome"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
