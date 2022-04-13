@@ -2,7 +2,9 @@ package com.carvalho.pi
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.text.Editable
 import android.text.InputType
+import android.text.TextWatcher
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,6 +19,7 @@ import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.carvalho.pi.databinding.FragmentEditProdutoBinding
+import com.carvalho.pi.helpers.Validator
 import com.carvalho.pi.model.Categoria
 import com.carvalho.pi.model.Produto
 
@@ -39,6 +42,7 @@ class EditProdutoFragment : Fragment() {
         setSpineerQuantidade()
 
         recuperarDados()
+        validadeForm()
 
         viewModel.responseCategoria.observe(viewLifecycleOwner) {
             Log.d("Req", it.body().toString())
@@ -106,12 +110,85 @@ class EditProdutoFragment : Fragment() {
         return binding.root
     }
 
+    private fun validadeForm() {
+
+        binding.textName.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                binding.textNameLayout.helperText = ""
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                //ignore
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+                binding.textNameLayout.helperText = binding.textName.text?.let {
+                    Validator().validationName(binding.textName.text.toString(), it)
+                }.toString()
+            }
+
+        })
+
+        binding.eTextDescricao.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                binding.textDescLayout.helperText = ""
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                //ignore
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+                binding.textDescLayout.helperText = binding.eTextDescricao.text?.let {
+                    Validator().validationDescription(binding.eTextDescricao.text.toString(), it)
+                }.toString()
+            }
+
+        })
+
+        binding.eTextValor.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                binding.textValorLayout.helperText = ""
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                //ignore
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+                binding.textValorLayout.helperText = binding.eTextValor.text?.let {
+                    Validator().validationValue(binding.eTextValor.text.toString(), it)
+                }.toString()
+            }
+        })
+
+        binding.spnrQtd.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                binding.textQtdLayout.helperText = binding.spnrQtd.text?.let {
+                    Validator().validationQuantity(binding.spnrQtd.text.toString(), it)
+                }.toString()
+            }
+        }
+
+        binding.spnrCateg.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                binding.textValorLayout.helperText = binding.spnrQtd.text?.let {
+                    Validator().validationQuantity(binding.spnrQtd.text.toString(), it)
+                }.toString()
+
+            }
+        }
+    }
+
+
     private fun recuperarDados() {
         produtoSelecionado = viewModel.produtoSelecionado
         if (produtoSelecionado != null) {
             binding.textName.setText(produtoSelecionado?.nomeMarca)
             binding.eTextDescricao.setText(produtoSelecionado?.descricao)
             Glide.with(this).load(produtoSelecionado?.imagem).placeholder(R.drawable.placeholder).into(binding.imgProd)
+            binding.spnrCateg.setText(produtoSelecionado?.categoria?.descricao)
+            categoriaSelect = produtoSelecionado!!.categoria
             binding.eTextValor.setText(produtoSelecionado?.valor.toString())
         } else {
             binding.textName.text = null
@@ -125,46 +202,36 @@ class EditProdutoFragment : Fragment() {
 
         var listaQuantidade = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
 
-        binding.spnrQtd.adapter = ArrayAdapter(
-            requireContext(),
-            androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
-            listaQuantidade
+        binding.spnrQtd.setAdapter(
+            ArrayAdapter(
+                requireContext(),
+                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
+                listaQuantidade
+            )
         )
 
-        binding.spnrQtd.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                qtdSelect = binding.spnrQtd.selectedItem.toString().toInt()
+        binding.spnrQtd.onItemClickListener =
+            AdapterView.OnItemClickListener { _, _, p2, _ ->
+                qtdSelect = binding.spnrQtd.adapter.getItem(p2).toString().toInt()
             }
-
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-                TODO("Not yet implemented")
-            }
-
-        }
 
     }
 
     fun setSpineerCategoria(listaCategoria: List<Categoria>?) {
         if (listaCategoria != null) {
-            binding.spnrCateg.adapter = ArrayAdapter(
-                requireContext(),
-                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
-                listaCategoria
+            binding.spnrCateg.setAdapter(
+                ArrayAdapter(
+                    requireContext(),
+                    androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
+                    listaCategoria
+                )
             )
 
-            binding.spnrCateg.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-                override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                    val categSelect = binding.spnrCateg.selectedItem as Categoria
+            binding.spnrCateg.onItemClickListener =
+                AdapterView.OnItemClickListener { _, _, p2, _ ->
+                    val categSelect = binding.spnrCateg.adapter.getItem(p2) as Categoria
                     categoriaSelect = categSelect
-
                 }
-
-                override fun onNothingSelected(p0: AdapterView<*>?) {
-                    TODO("Not yet implemented")
-                }
-
-            }
         }
     }
 

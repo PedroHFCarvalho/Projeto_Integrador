@@ -10,7 +10,8 @@
         <item name="colorSecondaryVariant">@color/secondaryTextColor</item>
         <item name="colorOnSecondary">@color/white</item> <!-- Botao do + flutuante-->
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primaryColorDark
+
         </item>
         <!-- Customize your theme here. -->
     </style>

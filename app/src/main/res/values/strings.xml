@@ -23,7 +23,7 @@
         <item>9</item>
         <item>10</item>
     </string-array>
-    <string-array name="categoria">
+    <string-array name="Categoria">
         <item>Categoria</item>
         <item>Reciclaveis</item>
         <item>Artesanatos</item>
@@ -180,7 +180,8 @@
     <string name="imagem_de_fundo_edit_produto">imagem de fundo edit produto</string>
     <string name="imagem_de_fundo_produto">imagem de fundo produto</string>
     <string name="logo_com_borda">logo com borda</string>
-    <string name="categoria">categoria</string>
-    <string name="quantidade">quantidade</string>
+    <string name="categoria">Categoria</string>
+    <string name="quantidade">Quantidade</string>
     <string name="comprar">comprar</string>
+    <string name="descri_o">Descrição</string>
 </resources>

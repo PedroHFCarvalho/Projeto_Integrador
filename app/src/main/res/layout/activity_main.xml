@@ -65,7 +65,8 @@
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:background="@drawable/bg_drawer"
-            app:menu="@menu/drawer_nav" />
+            app:menu="@menu/drawer_nav"
+            />
 
     </androidx.drawerlayout.widget.DrawerLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

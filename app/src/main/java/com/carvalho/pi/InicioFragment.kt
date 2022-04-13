@@ -14,7 +14,7 @@ import androidx.navigation.fragment.findNavController
 import com.carvalho.pi.databinding.ActivityMainBinding
 import com.carvalho.pi.databinding.FragmentInicioBinding
 
-class Inicio : Fragment() {
+class InicioFragment : Fragment() {
 
     private lateinit var  binding: FragmentInicioBinding
 
