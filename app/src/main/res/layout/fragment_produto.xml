@@ -109,7 +109,7 @@
                 android:autofillHints=""
                 android:gravity="start|top"
                 android:hint="@string/descricao"
-                android:inputType="textMultiLine"
+                android:inputType="textMultiLine|textNoSuggestions"
                 android:minHeight="48dp"
                 android:singleLine="false"
                 android:textColor="#004A00"
